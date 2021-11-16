@@ -45,6 +45,8 @@ int main() {
     int counter=0;
 
     //silly comment
+    //Hello Njabulo!
+    //
 
     while(counter<rand()%(MAX_VALUE-MIN_VALUE+1)+MIN_VALUE)
     {
