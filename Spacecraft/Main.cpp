@@ -16,8 +16,8 @@ int main() {
 
     srand(seed);
 
-    const int MIN_VALUE=100;
-    const int MAX_VALUE=200;
+    const int MIN_VALUE=0;
+    const int MAX_VALUE=20;
 
     /**
      * @brief This main will be used to test how the shuttle works and how it
@@ -36,17 +36,18 @@ int main() {
     
     Rocket * rocket=new Rocket();
 
-    CrewDragon * crewDragon=new CrewDragon(rocket);
+    Dragon * dragon=new Dragon(rocket);
 
     //attatch the crewDragon to the rocket
 
-    rocket->attatch(crewDragon);
+    rocket->attatch(dragon);
 
     int counter=0;
 
     //silly comment
     //Hello Njabulo!
-    //Niri mini 
+    //Niri mini
+    //ndi hone 
 
     while(counter<rand()%(MAX_VALUE-MIN_VALUE+1)+MIN_VALUE)
     {
@@ -58,6 +59,9 @@ int main() {
     rocket->setRocketStage2(true);
     rocket->notify();
     
+
+    delete rocket;
+    delete dragon;
     
 
 

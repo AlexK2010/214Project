@@ -20,14 +20,14 @@ private:
     double currentWeight;
     bool dockReady;
 
-    Rocket *rocket; //rocket i'm watching
-
 public:
     
     SpaceShuttle();
     SpaceShuttle(Rocket *f_rocket);
 
     ~SpaceShuttle();
+
+    Rocket *rocket; //rocket i'm watching
 
 
     double getWeightCapacity();

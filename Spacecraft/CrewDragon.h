@@ -16,6 +16,11 @@ class CrewDragon:public SpaceShuttle {
 
         virtual void update();
 
+        virtual void Deceleration();
+        virtual void MoveLeft();
+        virtual void MoveRight();
+        virtual void Dock();
+        virtual void Thrust();
 };
 
 #endif
