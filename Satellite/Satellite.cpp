@@ -12,7 +12,6 @@ void Satellite::doFunctionality(){
 } 
 
 //getters 
-
 double Satellite::getCost()
 {
     return this->cost;
@@ -23,23 +22,11 @@ bool Satellite::getAttached()
     return this->attached;
 }
 
-int Satellite::getX()
+Satellite* Satellite::getNext()
 {
-    return this->xPos;
+    return next;
 }
-
-int Satellite::getY()
-{
-    return this->yPos;
-}
-
-int Satellite::getZ()
-{
-    return this->zPos;
-}
-
 //setters
-
 void Satellite::setCost(double newcost)
 {
     this->cost = newcost;
@@ -50,17 +37,7 @@ void Satellite::setAttached(bool newb)
     this->attached = newb;
 }
 
-void Satellite::setX(int newx)
+void Satellite::setNext(Satellite* next)
 {
-    this->xPos = newx;
-}
-
-void Satellite::setY(int newy)
-{
-    this->yPos = newy;
-}
-
-void Satellite::setZ(int newz)
-{
-    this->zPos = newz;
+    this->next = next;
 }
