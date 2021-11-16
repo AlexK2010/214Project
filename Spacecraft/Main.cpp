@@ -36,11 +36,11 @@ int main() {
     
     Rocket * rocket=new Rocket();
 
-    CrewDragon * crewDragon=new CrewDragon(rocket);
+    Dragon * dragon=new Dragon(rocket);
 
     //attatch the crewDragon to the rocket
 
-    rocket->attatch(crewDragon);
+    rocket->attatch(dragon);
 
     int counter=0;
 
@@ -59,6 +59,9 @@ int main() {
     rocket->setRocketStage2(true);
     rocket->notify();
     
+
+    delete rocket;
+    delete dragon;
     
 
 
