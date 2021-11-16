@@ -43,6 +43,14 @@ public:
     virtual void update()=0;
     void registerRocket(Rocket * f_rocket);
 
+    /*
+    Command Functions!!!
+    */
+    virtual void Deceleration()=0;
+    virtual void MoveLeft()=0;
+    virtual void MoveRight()=0;
+    virtual void Dock()=0;
+    virtual void Thrust()=0;
 
 };
 

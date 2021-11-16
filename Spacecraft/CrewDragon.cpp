@@ -26,5 +26,5 @@ void CrewDragon::update()
         cout<<"Hold on tight crew."<<endl;
    }
    else
-        cout<<"Rocket Still attatched. Stage 2 [pendeing....]"<<endl;
+        cout<<"Rocket Still attatched. Stage 2 [pending....]"<<endl;
 }
