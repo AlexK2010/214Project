@@ -16,8 +16,8 @@ int main() {
 
     srand(seed);
 
-    const int MIN_VALUE=100;
-    const int MAX_VALUE=200;
+    const int MIN_VALUE=0;
+    const int MAX_VALUE=20;
 
     /**
      * @brief This main will be used to test how the shuttle works and how it
