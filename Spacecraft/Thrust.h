@@ -5,10 +5,7 @@
 #include "SpaceShuttle.h"
 
 class Thrust : public SpaceCraftCommand{
-    private:
-        SpaceShuttle* receiver;
     public:
         void execute();
-        void setReceiver(SpaceShuttle* s);
 };
 #endif
