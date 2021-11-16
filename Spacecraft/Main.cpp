@@ -8,6 +8,12 @@
 #include "CrewDragon.h"
 #include "SpaceShuttle.h"
 
+#include "MoveRight.h"
+#include "MoveLeft.h"
+#include "Dock.h"
+#include "Deceleration.h"
+#include "Thrust.h"
+
 using namespace std;
 
 int main() {
@@ -63,8 +69,22 @@ int main() {
     delete rocket;
     delete dragon;
     
+    /*
+    MOVE THE SHUTTLE TO LEFT AND THEN THRUST
+    */
 
-
+    SpaceShuttle* shuttle = new SpaceShuttle();
+    SpaceCraftCommand* moveLeft = new MoveLeft();
+    moveLeft->setReceiver(shuttle); //PASS THE POINTER TO THE SHUTTLE(RECEIVER)
+    Button* button = new Button(moveLeft);
+    button->press();
+    //Thrust
+    SpaceCraftCommand* thrust = new Thrust();
+    thrust->setReceiver(shuttle);
+    button = new Button(thrust);
+    button->press();
+    
+    delete button;
 
     return 0;
 }

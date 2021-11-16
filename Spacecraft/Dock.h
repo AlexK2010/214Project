@@ -6,6 +6,8 @@
 
 class Dock : public SpaceCraftCommand{
     public:
+        Dock();
         void execute();
+        ~Dock();
 };
 #endif

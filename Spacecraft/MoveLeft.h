@@ -6,6 +6,8 @@
 
 class MoveLeft : public SpaceCraftCommand{
     public:
+        MoveLeft();
         void execute();
+        ~MoveLeft();
 };
 #endif
