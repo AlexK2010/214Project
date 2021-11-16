@@ -2,7 +2,7 @@ CC=g++
 CFLAG=-Wall	-Werror
 LFLAGS=-static
 TARGET=	action
-OBJECTS=Main.o	Rocket.o	SpaceShuttle.o	CrewDragon.o	Dragon.o	
+OBJECTS=Main.o	Rocket.o	SpaceShuttle.o	CrewDragon.o	Dragon.o	InternationalSpaceStation.o	SpaceStation.o
 
 all:	$(OBJECTS)
 	$(CC)	$(CFLAGS)	$(OBJECTS)	-o	$(TARGET)
@@ -15,7 +15,11 @@ CrewDragon.o:	CrewDragon.h
 
 SpaceShuttle.o:	SpaceShuttle.h
 
-Main.o:		Dragon.h	CrewDragon.h	SpaceShuttle.h	Rocket.h
+InternationalSpaceStation.o:	InternationalSpaceStation.h
+
+SpaceStation.o:	SpaceStation.h
+
+Main.o:		Dragon.h	CrewDragon.h	SpaceShuttle.h	Rocket.h	InternationalSpaceStation.h	SpaceStation.h
 
 %.o:	%.cpp
 	$(CC)	$<	$(CFLAGS)	-c	-g	-o	$@

@@ -8,6 +8,10 @@
 #include "CrewDragon.h"
 #include "SpaceShuttle.h"
 
+//spacestation
+#include "SpaceStation.h"
+#include "InternationalSpaceStation.h"
+
 using namespace std;
 
 int main() {
@@ -26,6 +30,13 @@ int main() {
      *  
      */
 
+
+    Rocket * rocket=new Rocket();
+
+    Dragon * dragon=new Dragon(rocket);
+
+    SpaceStation * ISS=new InternationalSpaceStation(dragon);
+
     /**
      * TEST 1: Rocket vs SpaceShuttle
      * 
@@ -34,9 +45,6 @@ int main() {
      * When stage 2 kicks in a message will be printed to show this change of state.
      * */
     
-    Rocket * rocket=new Rocket();
-
-    Dragon * dragon=new Dragon(rocket);
 
     //attatch the crewDragon to the rocket
 
@@ -58,10 +66,36 @@ int main() {
 
     rocket->setRocketStage2(true);
     rocket->notify();
+
+    /***
+     * TEST 2: Commands vs SpaceShuttle
+     * We'll see how the SpaceShuttle uses the commands before docking
+     * */
+
+
+    /***
+     * TEST 3: SpaceStation vs SpaceShuttle
+     * We'll see how the SpaceShuttle uses the SpaceStation before and after docking
+     * */
+
+    dragon->attatch(ISS);
+
+    counter=0;
+
+    while(counter<rand()%(MAX_VALUE-MIN_VALUE+1)+MIN_VALUE)
+    {
+        dragon->setDockReady(false);
+        dragon->notify();
+        ++counter;
+    }
+
+    dragon->setDockReady(true);
+    dragon->notify();
     
 
     delete rocket;
     delete dragon;
+    delete ISS;
     
 
 

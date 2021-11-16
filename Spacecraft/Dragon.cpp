@@ -17,6 +17,8 @@ Dragon::~Dragon()
 
 void Dragon::update()
 {
+   this->setStage2(rocket->getRocketStage2());
+
    if(isStage2())
    {
        cout<<"Dragon entering stage 2."<<endl;
