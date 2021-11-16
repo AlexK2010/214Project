@@ -46,7 +46,7 @@ int main() {
 
     //silly comment
     //Hello Njabulo!
-    //
+    //Niri mini 
 
     while(counter<rand()%(MAX_VALUE-MIN_VALUE+1)+MIN_VALUE)
     {
