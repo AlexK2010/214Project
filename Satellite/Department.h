@@ -6,10 +6,9 @@
 class Department{
     private:
     public:
-        Department(){}
-        virtual ~Department()=0;
+        Department(){};
+        ~Department(){};
         virtual void notify(Satellite *colleague)=0;
 };
-
 
 #endif

@@ -16,9 +16,7 @@ void SignalDepartment::update()
     {
         this->waving = false;
     }
-    
 }
-
 
 void SignalDepartment::print()
 {
