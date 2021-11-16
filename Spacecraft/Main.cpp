@@ -11,7 +11,12 @@ using namespace std;
 int main() {
 
 
-    //This is a test for how the space shuttle will interact with the Rocket
+    /**
+     * @brief This main will be used to test how the shuttle works and how it
+     * 
+     * interacts with the Rocket and SpaceStation
+     *  
+     */
 
 
     return 0;
