@@ -19,8 +19,7 @@ class Satellite {
         Satellite* next;
         SatelliteFunctionality *strategy;
         GroundControl *GroundControlDep;
-        Path *currPath;
-
+    
         //Observer stuff (used for simulations)
         vector<GroundControl*> l;
         void attach(GroundControl*); //function to add observers to the observerList
@@ -28,6 +27,7 @@ class Satellite {
 		void notify(); //function that should notify all the observers in the observerList
     
     public:
+        Path *currPath;
         bool hasSignal;
         bool requireMaintenance;
         //Satellite();

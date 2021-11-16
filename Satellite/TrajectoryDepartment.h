@@ -10,7 +10,8 @@ class TrajectoryDepartment : public Department{
     public:
         TrajectoryDepartment(){};
         ~TrajectoryDepartment(){};
-         void notify(Satellite *colleague);
+        //  void notify(Satellite *colleague);
+         void notify(Satellite *colleague, int id);
 };
 
 #endif
