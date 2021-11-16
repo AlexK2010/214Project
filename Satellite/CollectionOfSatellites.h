@@ -7,6 +7,8 @@
 class CollectionOfSatellites{
         Satellite* start;
     public:
+        CollectionOfSatellites();
+        ~CollectionOfSatellites();
         SatelliteIterator* createSatelliteIterator();
         void addSatellite(Satellite*); // add from back
         void removeSatellite(); //remove from back
