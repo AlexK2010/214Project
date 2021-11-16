@@ -4,6 +4,14 @@
 
 using namespace std;
 
+#include <iostream>
+
+#include "Rocket.h"
+
+using namespace std;
+
+class Rocket; //forward declaration Rocket
+
 class SpaceShuttle{
 
 private:
@@ -12,10 +20,28 @@ private:
     double currentWeight;
     bool dockReady;
 
-public:
-    SpaceShuttle();
-    
+    Rocket *rocket; //rocket i'm watching
 
+public:
+    
+    SpaceShuttle();
+    SpaceShuttle(Rocket *f_rocket);
+
+    ~SpaceShuttle();
+
+
+    double getWeightCapacity();
+    bool isStage2();
+    double getCurrentWeight();
+    bool isDockReady();
+
+    void setWeightCapacity(double);
+    void setStage2(bool);
+    void setCurrentWeight(double);
+    void setDockReady(bool);
+
+    virtual void update()=0;
+    void registerRocket(Rocket * f_rocket);
 
 
 };
