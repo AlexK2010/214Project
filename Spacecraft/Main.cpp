@@ -18,6 +18,17 @@ int main() {
      *  
      */
 
+    /**
+     * TEST 1: Rocket vs SpaceShuttle
+     * 
+     * A Shuttle object will continually observe a rocket while it ascends.
+     * 
+     * When stage 2 kicks in a message will be printed to show this change of state.
+     * */
+    
+    
+
+
 
     return 0;
 }
