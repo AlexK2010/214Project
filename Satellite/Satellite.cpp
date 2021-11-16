@@ -8,7 +8,7 @@ Satellite::Satellite(double c)
 Satellite::~Satellite(){};
 
 void Satellite::doFunctionality(){
-    strategy->execute();
+    //strategy->execute();
 } 
 
 //getters 
@@ -41,3 +41,29 @@ void Satellite::setNext(Satellite* next)
 {
     this->next = next;
 }
+
+//Observer stuff
+void Satellite::attach(GroundControl* newOb)
+{
+     l.push_back(newOb);
+}
+
+void Satellite::detach(GroundControl* newOb)
+{
+    vector<GroundControl*>::iterator it = l.begin();
+	for (it = l.begin(); it != l.end(); ++it)
+    {
+        if(*it == newOb)
+        {
+            l.erase(it);
+        }
+    }
+}
+
+void Satellite::notify()
+{
+    vector<GroundControl*>::iterator it = l.begin();
+	for (it = l.begin(); it != l.end(); ++it)
+		(*it)->update();
+}
+
