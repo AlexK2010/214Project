@@ -3,11 +3,12 @@
 
 SpaceShuttle::SpaceShuttle()
 {
-
+    stage2=false;
 }
 
 SpaceShuttle::~SpaceShuttle()
 {
+    stage2=false;
     cout<<"SpaceShuttle destroyed"<<endl;
     rocket=NULL;
 }
