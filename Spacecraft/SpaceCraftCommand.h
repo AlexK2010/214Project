@@ -6,6 +6,6 @@
 class SpaceCraftCommand{
     public:
         virtual void execute()=0;
-        virtual void setReceiver(SpaceShuttle* s)=0; 
+        virtual void setReceiver(SpaceShuttle* s); 
 };
 #endif

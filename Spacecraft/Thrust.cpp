@@ -1,4 +1,4 @@
-#include "THRUST.h"
+#include "Thrust.h"
 #include "SpaceShuttle.h"
 
 void Thrust :: execute()

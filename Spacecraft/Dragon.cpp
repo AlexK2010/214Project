@@ -28,3 +28,32 @@ void Dragon::update()
        cout<<"Rocket Still attatched. Stage 2 [pendeing....]"<<endl;
       
 }
+
+void Dragon::Thrust()
+{
+    cout<<"Dragon engaging thrust. Accelerating"<<endl;
+}
+
+void Dragon::MoveLeft()
+{
+    cout<<"Dragon Moving Left."<<endl;
+}
+
+void Dragon::MoveRight()
+{
+    cout<<"Dragon Moving Right."<<endl;
+}
+
+void Dragon::Deceleration()
+{
+    cout<<"Dragon reducing thrust. Decelerating."<<endl;
+}
+
+void Dragon::Dock()
+{
+    cout<<"Dragon Has initiated Docking sequence"<<endl;
+}
+
+
+
+

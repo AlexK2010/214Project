@@ -28,3 +28,28 @@ void CrewDragon::update()
    else
         cout<<"Rocket Still attatched. Stage 2 [pending....]"<<endl;
 }
+
+void CrewDragon::Thrust()
+{
+    cout<<"CrewDragon engaging thrust. Accelerating"<<endl;
+}
+
+void CrewDragon::MoveLeft()
+{
+    cout<<"CrewDragon Moving Left."<<endl;
+}
+
+void CrewDragon::MoveRight()
+{
+    cout<<"CrewDragon Moving Right."<<endl;
+}
+
+void CrewDragon::Deceleration()
+{
+    cout<<"CrewDragon reducing thrust. Decelerating."<<endl;
+}
+
+void CrewDragon::Dock()
+{
+    cout<<"CrewDragon Has initiated Docking sequence"<<endl;
+}
