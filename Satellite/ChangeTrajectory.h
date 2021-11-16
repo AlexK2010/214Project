@@ -4,6 +4,6 @@
 using namespace std;
 class ChangeTrajectory : public SatelliteFunctionality{
 	public:
-		void execute();
+		void execute(CollectionOfSatellites* collection, int time);
 };
 #endif

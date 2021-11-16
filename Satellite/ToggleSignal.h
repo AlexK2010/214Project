@@ -4,7 +4,6 @@
 using namespace std;
 class ToggleSignal : public SatelliteFunctionality{
 	public:
-		void execute();
-        void SignalChecker(CollectionOfSatellites* collection, int time);
+		void execute(CollectionOfSatellites* collection, int time);
 };
 #endif

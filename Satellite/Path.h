@@ -1,11 +1,12 @@
 #ifndef PATH_H
 #define PATH_H
-using namespace std;
+
+#include "Satellite.h"
 class Path{
 	private:
-		int ID;
+		int id;
     public:
-    Path();
+    Path(int);
     ~Path();
     string getCurrContinent(int time);
     string ListCont();

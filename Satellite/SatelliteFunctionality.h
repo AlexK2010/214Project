@@ -7,7 +7,7 @@
 class SatelliteFunctionality{
     private:
     public:
-        virtual void execute() =0;
+        virtual void execute(CollectionOfSatellites* collection, int time) =0;
 };
 
 #endif
