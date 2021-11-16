@@ -2,11 +2,12 @@
 #define SATELLITEFUNCTIONALITY_H
 
 #include "Satellite.h"
+#include "CollectionOfSatellites.h"
 
 class SatelliteFunctionality{
     private:
     public:
-        void execute();
+        virtual void execute(CollectionOfSatellites* collection, int time) =0;
 };
 
 #endif

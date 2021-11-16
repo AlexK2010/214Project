@@ -6,6 +6,7 @@
 #include "Department.h"
 #include "GroundControl.h"
 #include "SatelliteFunctionality.h"
+#include "Path.h"
 
 using namespace std;
 
@@ -13,32 +14,28 @@ class Satellite {
     private:
         double cost;
         bool attached;
+        bool hasSignal;
         Department *currentDepartment;
-        int xPos, yPos, zPos;
+        Satellite* next;
         SatelliteFunctionality *strategy;
         GroundControl *GroundControlDep;
+        Path *currPath;
     
     public:
         Satellite(double c);
         ~Satellite();
         void doFunctionality();
 
-
         //getters
         double getCost();
         bool getAttached();
-        int getX();
-        int getY();
-        int getZ();
+        Satellite* getNext();
 
         //setters
         void setCost(double x);
         void setAttached(bool b);
-        void setX(int x);
-        void setY(int y);
-        void setZ(int z);
-
-
+        void setNext(Satellite*);
+    
 };
 
 #endif
