@@ -44,6 +44,8 @@ int main() {
 
     int counter=0;
 
+    //silly comment
+
     while(counter<rand()%(MAX_VALUE-MIN_VALUE+1)+MIN_VALUE)
     {
         rocket->setRocketStage2(false);
