@@ -10,10 +10,14 @@ using namespace std;
 class RocketFirstStage : public RocketStage
 {
     private:
-        F9Core** coreList;              //List of F9Cores - 1 for a Falcon9, 3 for a FalconHeavy
+        F9Core** coreList;                              //List of F9Cores - 1 for a Falcon9, 3 for a FalconHeavy
+        int numCores;
+        RocketIterator* obsList;
     public:
-        RocketFirstStage(bool, RocketIterator*);         //Boolean parameter determines rocket type: Falcon9-F/FalconHeavy-T
+        RocketFirstStage(bool, RocketIterator*);        //Boolean parameter determines rocket type: Falcon9-F/FalconHeavy-T
         ~RocketFirstStage();
         bool land();
+        void breakEngines(int, int);
+        void breakEngine(int, int){};                   //Just here because of the rocket stage virtual function
 };
 #endif
