@@ -27,6 +27,7 @@ class Satellite {
 		void notify(); //function that should notify all the observers in the observerList
     
     public:
+        int timeReleased;
         Path currPath;
         bool hasSignal;
         bool requireMaintenance;
@@ -34,6 +35,7 @@ class Satellite {
         Satellite(double c);
         ~Satellite();
         void doFunctionality();
+        void detachFromRocket(int t);
 
         //getters
         double getCost();

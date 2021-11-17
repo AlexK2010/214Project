@@ -5,7 +5,7 @@ void ChangeTrajectory::execute(CollectionOfSatellites* collection, int time){
     while(it->hasNext()){
         SatelliteIterator* runner = collection->createSatelliteIterator(); 
         while(runner->hasNext()){
-            if(it->current()->getPath().getCurrContinent(time) == runner->current()->getPath().getCurrContinent(time)){
+            if(it->current()->getPath().getCurrContinent(time + it->current()->timeReleased) == runner->current()->getPath().getCurrContinent(time + it->current()->timeReleased)){
                 if(it->current()->getPath().getID()==4){
                     it->current()->setPath(1);
                 }
