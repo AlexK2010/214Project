@@ -1,5 +1,5 @@
 #include "Button.h"
-#include "SpaceCraftCommand.h"
+
 
 Button :: Button(SpaceCraftCommand* c)
 {
@@ -15,7 +15,14 @@ Button :: ~Button()
 {
     if(command!=nullptr)
     {
-        delete command;
         command = nullptr;
     }
+
+    cout <<"Button is destroyed!" <<endl;
+}
+
+void Button::setCommand(SpaceCraftCommand *c)
+{
+    command=NULL;
+    command=c;
 }

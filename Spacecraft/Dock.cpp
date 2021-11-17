@@ -1,12 +1,20 @@
 #include "Dock.h"
-#include "Spaceshuttle.h"
+
+#include <iostream>
+
+using namespace std;
+
+Dock :: Dock()
+{
+
+}
 
 void Dock :: execute()
 {
-    receiver->Dock();
+    this->getReceiver()->dock();
 }
 
-void Dock :: setReceiver(SpaceShuttle* s)
+Dock :: ~Dock()
 {
-    receiver = s;
+    cout << "Dock destroyed" <<endl;
 }

@@ -1,12 +1,19 @@
 #include "MoveLeft.h"
-#include "SpaceShuttle.h"
+#include <iostream>
+
+using namespace std;
+
+MoveLeft :: MoveLeft():SpaceCraftCommand()
+{
+
+}
 
 void MoveLeft :: execute()
 {
-    receiver->MoveLeft();
+    getReceiver()->moveLeft();
 }
 
-void MoveLeft :: setReceiver(SpaceShuttle* s)
+MoveLeft :: ~MoveLeft()
 {
-    receiver = s;
+    cout << "MoveLeft is destroyed." <<endl;
 }

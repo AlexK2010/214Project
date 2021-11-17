@@ -1,12 +1,17 @@
 #include "Deceleration.h"
-#include "SpaceShuttle.h"
+
+
+Deceleration :: Deceleration():SpaceCraftCommand()
+{
+
+}
 
 void Deceleration :: execute()
 {
-    receiver->Deceleration();
+    getReceiver()->deceleration();
 }
 
-void Deceleration :: setReceiver(SpaceShuttle* s)
+Deceleration :: ~Deceleration()
 {
-    receiver = s;
+    cout << "Deceleration is destroyed." <<endl;
 }

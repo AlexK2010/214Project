@@ -2,13 +2,17 @@
 #define DECELERATION_H
 
 #include "SpaceCraftCommand.h"
-#include "SpaceShuttle.h"
+
+#include <iostream>
+
+using namespace std;
+
 
 class Deceleration : public SpaceCraftCommand{
-    private:
-        SpaceShuttle* receiver;
+
     public:
-        void execute();
-        void setReceiver(SpaceShuttle* s);
+        Deceleration();
+        virtual void execute();
+        ~Deceleration();
 };
 #endif

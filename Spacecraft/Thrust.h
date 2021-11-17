@@ -2,13 +2,11 @@
 #define THRUST_H
 
 #include "SpaceCraftCommand.h"
-#include "SpaceShuttle.h"
 
 class Thrust : public SpaceCraftCommand{
-    private:
-        SpaceShuttle* receiver;
     public:
+        Thrust();
         void execute();
-        void setReceiver(SpaceShuttle* s);
+        ~Thrust();
 };
 #endif

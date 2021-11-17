@@ -2,13 +2,11 @@
 #define MOVELEFT_H
 
 #include "SpaceCraftCommand.h"
-#include "SpaceShuttle.h"
 
 class MoveLeft : public SpaceCraftCommand{
-    private:
-        SpaceShuttle* receiver;
     public:
+        MoveLeft();
         void execute();
-        void setReceiver(SpaceShuttle* s);
+        ~MoveLeft();
 };
 #endif

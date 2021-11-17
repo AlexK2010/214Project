@@ -4,8 +4,18 @@
 #include "SpaceShuttle.h"
 
 class SpaceCraftCommand{
+    private:
+        SpaceShuttle* receiver;
     public:
+        SpaceCraftCommand();
+
+        virtual ~SpaceCraftCommand();
+
         virtual void execute()=0;
-        virtual void setReceiver(SpaceShuttle* s)=0; 
+
+        void setReceiver(SpaceShuttle* s);
+        
+        SpaceShuttle* getReceiver();
+        
 };
 #endif

@@ -1,12 +1,19 @@
-#include "THRUST.h"
-#include "SpaceShuttle.h"
+#include "Thrust.h"
+#include <iostream>
+
+using namespace std;
+
+Thrust :: Thrust():SpaceCraftCommand()
+{
+
+}
 
 void Thrust :: execute()
 {
-    receiver->Thrust();
+    getReceiver()->thrust();
 }
 
-void Thrust :: setReceiver(SpaceShuttle* s)
+Thrust::~Thrust()
 {
-    receiver = s;
+    cout<<"Thrust Destroyed"<<endl;   
 }
