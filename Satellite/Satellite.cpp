@@ -75,3 +75,7 @@ void Satellite::setPath(int i){
     currPath.setID(i);
 }
 
+void Satellite::detachFromRocket(int t){
+    timeReleased = t;
+}
+
