@@ -9,8 +9,8 @@ using namespace std;
 class RocketFactory
 {
     protected:
-        StageCreator* ssCreator;                            //Factory for Rocket second stage
+        StageCreator* ssCreator;                  //Factory for Rocket second stage
     public:
-        virtual Rocket* createRocket(StageCreator*) = 0;    //Creates the rocket and returns it
+        virtual Rocket* createRocket(int) = 0;    //Creates the rocket and returns it
 };
 #endif

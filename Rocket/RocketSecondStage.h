@@ -14,5 +14,6 @@ class RocketSecondStage : public RocketStage
     public:
         RocketSecondStage(RocketIterator*);
         ~RocketSecondStage();
+        void breakEngine(int, int);
 };
 #endif
