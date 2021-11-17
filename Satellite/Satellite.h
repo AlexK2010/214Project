@@ -28,7 +28,7 @@ class Satellite {
     
     public:
         int timeReleased;
-        Path currPath;
+        Path currPath = NULL;
         bool hasSignal;
         bool requireMaintenance;
         //Satellite();
