@@ -2,13 +2,14 @@
 #define RISKANALYSIS_H
 
 #include "Satellite.h"
+#include "CollectionOfSatellites.h"
 
 class RiskAnalysis : public Department{
     public:
         RiskAnalysis(){};
         ~RiskAnalysis(){};
-        double calcCost(Satellite *colleague);
-        void notify(Satellite *colleague);
+        double calcCost(CollectionOfSatellites *colleague);
+        void notify(CollectionOfSatellites *colleague);
 };
 
 #endif

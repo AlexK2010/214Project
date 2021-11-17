@@ -31,7 +31,7 @@ class Satellite {
         Path currPath = NULL;
         bool hasSignal;
         bool requireMaintenance;
-        //Satellite();
+        Satellite(){}
         Satellite(double c);
         ~Satellite();
         void doFunctionality();
