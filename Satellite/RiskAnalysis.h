@@ -4,7 +4,6 @@
 #include "Satellite.h"
 
 class RiskAnalysis : public Department{
-    private:
     public:
         RiskAnalysis(){};
         ~RiskAnalysis(){};

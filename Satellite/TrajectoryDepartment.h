@@ -6,7 +6,6 @@
 #include "ChangeTrajectory.h"
 
 class TrajectoryDepartment : public Department{
-    private:
     public:
         TrajectoryDepartment(){};
         ~TrajectoryDepartment(){};

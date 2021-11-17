@@ -12,5 +12,21 @@ void RiskAnalysis::notify(Satellite* newSat)
 
 double RiskAnalysis::calcCost(Satellite *newSat)
 {
-    //algorithm here.
+    //algorithm here. Path determine cost ?
+    //cost has own unique units
+    if(newSat->currPath->getID() == 1)
+    {
+        newSat->setCost(10);
+    }
+    else if(newSat->currPath->getID() == 2)
+    {
+        newSat->setCost(20);
+    }
+    else if(newSat->currPath->getID() == 3)
+    {
+        newSat->setCost(30);
+    }
+    else{
+        newSat->setCost(40);
+    };
 }
