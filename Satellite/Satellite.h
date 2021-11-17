@@ -19,7 +19,7 @@ class Satellite {
         Satellite* next;
         SatelliteFunctionality *strategy;
         GroundControl *GroundControlDep;
-    
+        
         //Observer stuff (used for simulations)
         vector<GroundControl*> l;
         void attach(GroundControl*); //function to add observers to the observerList
