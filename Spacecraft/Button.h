@@ -10,5 +10,7 @@ class Button{
         Button(SpaceCraftCommand* c);
         void press();
         ~Button();
+
+        void setCommand(SpaceCraftCommand *c);
 };
 #endif

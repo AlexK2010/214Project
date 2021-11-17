@@ -5,6 +5,8 @@
 
 class Deceleration : public SpaceCraftCommand{
     public:
+        Deceleration();
         void execute();
+        ~Deceleration();
 };
 #endif

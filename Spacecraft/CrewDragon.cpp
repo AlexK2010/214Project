@@ -54,4 +54,6 @@ void CrewDragon::Deceleration()
 void CrewDragon::Dock()
 {
     cout<<"CrewDragon Has initiated Docking sequence"<<endl;
+    this->setDockReady(true);
+    notify();
 }

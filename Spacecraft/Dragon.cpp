@@ -54,6 +54,8 @@ void Dragon::Deceleration()
 void Dragon::Dock()
 {
     cout<<"Dragon Has initiated Docking sequence"<<endl;
+    this->setDockReady(true);
+    notify();
 }
 
 

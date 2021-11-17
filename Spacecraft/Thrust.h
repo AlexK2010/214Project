@@ -6,6 +6,8 @@
 
 class Thrust : public SpaceCraftCommand{
     public:
+        Thrust();
         void execute();
+        ~Thrust();
 };
 #endif

@@ -1,6 +1,7 @@
 #include "Button.h"
-#include "SpaceCraftCommand.h"
 
+
+using namespace std;
 Button :: Button(SpaceCraftCommand* c)
 {
     command = c;
@@ -15,7 +16,8 @@ Button :: ~Button()
 {
     if(command!=nullptr)
     {
-        delete command;
         command = nullptr;
     }
+
+    cout <<"Button is destroyed!" <<endl;
 }

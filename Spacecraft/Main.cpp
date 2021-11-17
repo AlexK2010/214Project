@@ -12,6 +12,15 @@
 #include "SpaceStation.h"
 #include "InternationalSpaceStation.h"
 
+//commands
+#include "Thrust.h"
+#include "Deceleration.h"
+#include "MoveLeft.h"
+#include "MoveRight.h"
+#include "Dock.h"
+#include "SpaceCraftCommand.h"
+#include "Button.h"
+
 using namespace std;
 
 int main() {
@@ -37,6 +46,14 @@ int main() {
 
     SpaceStation * ISS=new InternationalSpaceStation(dragon);
 
+    SpaceCraftCommand* moveLeft = new MoveLeft();
+    SpaceCraftCommand* moveRight = new MoveRight();
+    SpaceCraftCommand* thrust = new Thrust();
+    SpaceCraftCommand* deceleration=new Deceleration();
+    SpaceCraftCommand * dock=new Dock();
+
+    Button* button = new Button(thrust);
+
     /**
      * TEST 1: Rocket vs SpaceShuttle
      * 
@@ -47,6 +64,9 @@ int main() {
     
 
     //attatch the crewDragon to the rocket
+
+
+    cout<<"Test 1: Observing the Rocket"<<endl;
 
     rocket->attatch(dragon);
 
@@ -67,10 +87,32 @@ int main() {
     rocket->setRocketStage2(true);
     rocket->notify();
 
+    cout<<""<<endl;
+
     /***
      * TEST 2: Commands vs SpaceShuttle
      * We'll see how the SpaceShuttle uses the commands before docking
      * */
+
+    cout<<"Test 2: SpaceShuttle using the commands"<<endl;
+
+    moveLeft->setReceiver(dragon);
+    moveRight->setReceiver(dragon);
+    thrust->setReceiver(dragon);
+    deceleration->setReceiver(dragon); 
+
+    button->press();
+
+    button->setCommand(moveLeft);
+    button->press();
+
+    button->setCommand(moveRight);
+    button->press();
+
+    button->setCommand(deceleration);
+    button->press();
+    
+    cout<<endl;
 
 
     /***
@@ -89,16 +131,21 @@ int main() {
         ++counter;
     }
 
-    dragon->setDockReady(true);
-    dragon->notify();
-    
+    button->setCommand(dock);
+    button->press();
 
     delete rocket;
     delete dragon;
     delete ISS;
+    delete button;
+    delete moveRight;
+    delete moveLeft;
+    delete thrust;
+    delete deceleration;
+    delete dock;
     
-
-
+    
+    
 
     return 0;
 }
