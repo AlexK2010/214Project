@@ -12,5 +12,6 @@ class Path{
     string ListCont();
   public:
     int getID();
+    void setID(int i);
 };
 #endif

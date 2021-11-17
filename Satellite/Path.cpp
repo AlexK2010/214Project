@@ -70,3 +70,7 @@ int Path::getID()
 {
     return this->id;
 }
+
+void Path::setID(int i){
+    id = i;
+}

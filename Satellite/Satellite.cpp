@@ -67,3 +67,11 @@ void Satellite::notify()
 		(*it)->update();
 }
 
+Path Satellite::getPath(){
+    return currPath;
+}
+
+void Satellite::setPath(int i){
+    currPath.setID(i);
+}
+

@@ -27,7 +27,7 @@ class Satellite {
 		void notify(); //function that should notify all the observers in the observerList
     
     public:
-        Path *currPath;
+        Path currPath;
         bool hasSignal;
         bool requireMaintenance;
         //Satellite();
@@ -39,11 +39,13 @@ class Satellite {
         double getCost();
         bool getAttached();
         Satellite* getNext();
+        Path getPath();
 
         //setters
         void setCost(double x);
         void setAttached(bool b);
         void setNext(Satellite*);
+        void setPath(int i);
     
 };
 
