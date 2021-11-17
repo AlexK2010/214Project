@@ -3,11 +3,14 @@
 
 SpaceShuttle::SpaceShuttle()
 {
-
+    stage2=false;
+    dockReady=false;
 }
 
 SpaceShuttle::~SpaceShuttle()
 {
+    stage2=false;
+    dockReady=false;
     cout<<"SpaceShuttle destroyed"<<endl;
     rocket=NULL;
 }
@@ -76,3 +79,22 @@ void SpaceShuttle::registerRocket(Rocket * f_rocket)
 }
 
 
+void SpaceShuttle::attatch(SpaceStation *f_spaceStation)
+{
+    this->spaceStation=f_spaceStation;   
+}
+
+void SpaceShuttle::detatch()
+{
+    spaceStation=NULL;
+}
+
+void SpaceShuttle::notify()
+{
+    /*
+        Update the spacestation on my docking status
+        Remember that the setting to true is done on the client side
+    */
+
+    this->spaceStation->update(); 
+}

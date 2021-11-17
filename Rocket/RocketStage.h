@@ -3,5 +3,8 @@
 
 using namespace std;
 
-class RocketStage {};   //Generalises the two rocket stages
+class RocketStage {
+    public:
+        virtual void breakEngine(int, int) = 0;
+};   //Generalises the two rocket stages
 #endif

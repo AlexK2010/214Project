@@ -3,13 +3,14 @@
 
 #include "Satellite.h"
 
-class GroundControl{
+class GroundControl{ //Acts as Concrete Observer
     private:
     public:
-        GroundControl(){}
-        virtual ~GroundControl()=0;
-        virtual void notify(Satellite *colleague)=0;
+        // GroundControl(){}
+        // virtual ~GroundControl()=0;
+        //virtual void notify(Satellite *colleague)=0;
+        virtual void print()=0;
+        virtual void update()=0;
 };
-
 
 #endif

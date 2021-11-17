@@ -40,7 +40,7 @@ void Rocket::detatch()
 
 void Rocket::notify()
 {
-    spaceShuttle->setStage2(true);
+    spaceShuttle->update();
 }
 
 void Rocket::setRocketStage2(bool stage)
@@ -48,9 +48,9 @@ void Rocket::setRocketStage2(bool stage)
     this->RocketStage2=stage;
 }
 
-bool getRocketStage2()
+bool Rocket::getRocketStage2()
 {
-    return getRocketStage2;
+    return RocketStage2;
 }
 
 

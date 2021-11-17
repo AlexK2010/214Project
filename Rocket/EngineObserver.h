@@ -10,9 +10,8 @@ class EngineObserver : public RocketObserver
 {
     private:
         bool state;                     //Shows whether or not the engine has failed: Running-F/Failed-T
-        Engine* subject;
     public:
-        void setSubject(Engine*);
+        EngineObserver();
         void update();
         bool getState(); 
 };
