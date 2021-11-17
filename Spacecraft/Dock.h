@@ -2,7 +2,6 @@
 #define DOCK_H
 
 #include "SpaceCraftCommand.h"
-#include "SpaceShuttle.h"
 
 class Dock : public SpaceCraftCommand{
     public:

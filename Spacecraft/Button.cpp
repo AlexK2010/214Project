@@ -1,7 +1,6 @@
 #include "Button.h"
 
 
-using namespace std;
 Button :: Button(SpaceCraftCommand* c)
 {
     command = c;
@@ -20,4 +19,10 @@ Button :: ~Button()
     }
 
     cout <<"Button is destroyed!" <<endl;
+}
+
+void Button::setCommand(SpaceCraftCommand *c)
+{
+    command=NULL;
+    command=c;
 }

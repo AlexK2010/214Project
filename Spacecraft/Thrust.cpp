@@ -10,12 +10,7 @@ Thrust :: Thrust():SpaceCraftCommand()
 
 void Thrust :: execute()
 {
-    getReceiver()->Thrust();
-}
-
-Thrust :: Thrust()
-{
-    cout << "Thrust is DONE!" <<endl;
+    getReceiver()->thrust();
 }
 
 Thrust::~Thrust()

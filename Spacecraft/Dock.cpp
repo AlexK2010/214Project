@@ -11,10 +11,10 @@ Dock :: Dock()
 
 void Dock :: execute()
 {
-    getReceiver()->Dock();
+    this->getReceiver()->dock();
 }
 
 Dock :: ~Dock()
 {
-    cout << "Dock is going out of scope." <<endl;
+    cout << "Dock destroyed" <<endl;
 }

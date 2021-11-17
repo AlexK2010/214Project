@@ -53,11 +53,11 @@ public:
     /*
         Command Functions!!!
     */
-    virtual void Deceleration()=0;
-    virtual void MoveLeft()=0;
-    virtual void MoveRight()=0;
-    virtual void Dock()=0;
-    virtual void Thrust()=0;
+    virtual void deceleration()=0;
+    virtual void moveLeft()=0;
+    virtual void moveRight()=0;
+    virtual void dock()=0;
+    virtual void thrust()=0;
 
     /*
         Subject stuff-SpaceStation

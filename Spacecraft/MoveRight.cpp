@@ -10,7 +10,7 @@ MoveRight :: MoveRight():SpaceCraftCommand()
 
 void MoveRight :: execute()
 {
-    getReceiver()->MoveRight();
+    getReceiver()->moveRight();
 }
 
 MoveRight :: ~MoveRight()

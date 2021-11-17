@@ -42,7 +42,7 @@ int main() {
 
     Rocket * rocket=new Rocket();
 
-    Dragon * dragon=new Dragon(rocket);
+    SpaceShuttle * dragon=new Dragon(rocket);
 
     SpaceStation * ISS=new InternationalSpaceStation(dragon);
 
@@ -50,7 +50,7 @@ int main() {
     SpaceCraftCommand* moveRight = new MoveRight();
     SpaceCraftCommand* thrust = new Thrust();
     SpaceCraftCommand* deceleration=new Deceleration();
-    SpaceCraftCommand * dock=new Dock();
+    SpaceCraftCommand* dock=new Dock();
 
     Button* button = new Button(thrust);
 
@@ -100,6 +100,7 @@ int main() {
     moveRight->setReceiver(dragon);
     thrust->setReceiver(dragon);
     deceleration->setReceiver(dragon); 
+    dock->setReceiver(dragon);
 
     button->press();
 
@@ -120,6 +121,8 @@ int main() {
      * We'll see how the SpaceShuttle uses the SpaceStation before and after docking
      * */
 
+    cout<<"Test 3:Going to the ISS"<<endl;
+
     dragon->attatch(ISS);
 
     counter=0;
@@ -131,8 +134,12 @@ int main() {
         ++counter;
     }
 
-    button->setCommand(dock);
+    
+
+    button->setCommand(dock); //docking sequesce done through button
     button->press();
+
+    cout<<endl;
 
     delete rocket;
     delete dragon;

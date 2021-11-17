@@ -2,7 +2,6 @@
 #define THRUST_H
 
 #include "SpaceCraftCommand.h"
-#include "SpaceShuttle.h"
 
 class Thrust : public SpaceCraftCommand{
     public:

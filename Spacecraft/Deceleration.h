@@ -3,10 +3,16 @@
 
 #include "SpaceCraftCommand.h"
 
+#include <iostream>
+
+using namespace std;
+
+
 class Deceleration : public SpaceCraftCommand{
+
     public:
         Deceleration();
-        void execute();
+        virtual void execute();
         ~Deceleration();
 };
 #endif

@@ -4,11 +4,13 @@
 using namespace std;
 
 MoveLeft :: MoveLeft():SpaceCraftCommand()
-{}
+{
+
+}
 
 void MoveLeft :: execute()
 {
-    getReceiver()->MoveLeft();
+    getReceiver()->moveLeft();
 }
 
 MoveLeft :: ~MoveLeft()
