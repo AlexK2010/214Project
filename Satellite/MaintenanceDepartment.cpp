@@ -15,9 +15,7 @@ void MaintenanceDepartment::update()
     {
         this->waving = false;
     }
-    
 }
-
 
 void MaintenanceDepartment::print()
 {
@@ -27,6 +25,6 @@ void MaintenanceDepartment::print()
     }
     else
     {
-        cout << "Requires Maintenance!" << endl;
+        cout << "Does Not Require Maintenance!" << endl;
     }
 }
