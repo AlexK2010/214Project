@@ -1,6 +1,7 @@
 #ifndef ROCKET_H
 #define ROCKET_H
 
+//Rocket
 #include "EOIterator.h"
 #include "RocketObserver.h"
 #include "RocketStage.h"
@@ -8,6 +9,15 @@
 #include "StageCreator.h"
 #include "CollectionOfSatellites.h"
 #include "SpaceShuttle.h"
+
+//SpaceCraft
+#include "../Spacecraft/SpaceShuttle.h"
+
+//Satellites
+
+class SpaceShuttle; //forwrad Declarations of Space Shuttle
+
+
 
 using namespace std;
 
