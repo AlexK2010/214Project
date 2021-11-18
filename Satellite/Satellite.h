@@ -30,9 +30,9 @@ class Satellite {
     public:
         int timeReleased;
         Path currPath = NULL;
-        bool hasSignal = false;
-        bool requireMaintenance = false;
-        //Satellite();
+        bool hasSignal;
+        bool requireMaintenance;
+        Satellite(){}
         Satellite(double c);
         ~Satellite();
         void doFunctionality();

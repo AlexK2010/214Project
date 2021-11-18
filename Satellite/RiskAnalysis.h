@@ -7,10 +7,10 @@
 class RiskAnalysis : public Department{
         CollectionOfSatellites* arr;
     public:
-        RiskAnalysis(CollectionOfSatellites* collec);
-        ~RiskAnalysis();
-        double calcCost();
-        void notify();
+        RiskAnalysis(){};
+        ~RiskAnalysis(){};
+        double calcCost(CollectionOfSatellites *colleague);
+        void notify(CollectionOfSatellites *colleague);
 };
 
 #endif

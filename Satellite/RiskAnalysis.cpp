@@ -6,15 +6,29 @@ RiskAnalysis::RiskAnalysis(CollectionOfSatellites* collec){
 
 RiskAnalysis::~RiskAnalysis(){}
 
-void RiskAnalysis::notify()
+void RiskAnalysis::notify(CollectionOfSatellites* newSat)
 {
-    calcCost(); //calculate the cost
+    calcCost(newSat); //calculate the cost
+    //cout << "Total cost of Satellite: " << newSat->getCost() << endl;
 }
 
-double RiskAnalysis::calcCost()
+double RiskAnalysis::calcCost(CollectionOfSatellites *newSat)
 {
     //algorithm here. Path determine cost./ ?
     //cost has own unique units
-    SatelliteIterator* it = arr->createSatelliteIterator();
-    
+    // if(newSat->currPath->getID() == 1)
+    // {
+    //     newSat->setCost(10);
+    // }
+    // else if(newSat->currPath->getID() == 2)
+    // {
+    //     newSat->setCost(20);
+    // }
+    // else if(newSat->currPath->getID() == 3)
+    // {
+    //     newSat->setCost(30);
+    // }
+    // else{
+    //     newSat->setCost(40);
+    // };
 }

@@ -4,7 +4,7 @@ TrajectoryDepartment::TrajectoryDepartment(){}
 
 TrajectoryDepartment::~TrajectoryDepartment(){}
 
-void TrajectoryDepartment::notify(Satellite* newSat, int id)
+void TrajectoryDepartment::notify(CollectionOfSatellites* newSat, int id)
 {
-    cout << "Changing Trajectory to " << newSat->currPath->getCurrContinent(id)  << endl; //unsure
+    cout << "Calculations are done, no clashes within the next 4 hours "  << endl; //unsure
 }
