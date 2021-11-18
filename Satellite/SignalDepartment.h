@@ -12,7 +12,6 @@ class SignalDepartment : public GroundControl, public Satellite{
         CollectionOfSatellites* signalSatellites;
         SignalDepartment(CollectionOfSatellites*);
         void update();
-        void print();
         bool waving;
 };
 #endif

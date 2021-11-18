@@ -3,14 +3,18 @@
 
 #include "Satellite.h"
 #include "CollectionOfSatellites.h"
+#include "ToggleSignal.h"
+#include "ChangeTrajectory.h"
 
 class RiskAnalysis : public Department{
         CollectionOfSatellites* arr;
+        SatelliteFunctionality* strategy1;
+        SatelliteFunctionality* strategy2;
     public:
-        RiskAnalysis(){};
+        RiskAnalysis(CollectionOfSatellites* ){};
         ~RiskAnalysis(){};
-        double calcCost(CollectionOfSatellites *colleague);
-        void notify(CollectionOfSatellites *colleague);
+        double calcCost();
+        void notify();
 };
 
 #endif
