@@ -77,5 +77,8 @@ void Satellite::setPath(int i){
 
 void Satellite::detachFromRocket(int t){
     timeReleased = t;
+    currPath.setID(rand() % 5);
+    hasSignal=true;
+    attached=false;
 }
 

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 #include "Department.h"
 #include "GroundControl.h"
 #include "SatelliteFunctionality.h"
@@ -14,10 +16,9 @@ using namespace std;
 class Satellite {
     private:
         double cost; 
-        bool attached;
+        bool attached=true;;
         Department *currentDepartment;
         Satellite* next;
-        SatelliteFunctionality *strategy;
         GroundControl *GroundControlDep;
         
         //Observer stuff (used for simulations)
@@ -29,8 +30,8 @@ class Satellite {
     public:
         int timeReleased;
         Path currPath = NULL;
-        bool hasSignal;
-        bool requireMaintenance;
+        bool hasSignal = false;
+        bool requireMaintenance = false;
         //Satellite();
         Satellite(double c);
         ~Satellite();
