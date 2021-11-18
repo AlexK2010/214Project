@@ -21,18 +21,21 @@ private:
     bool stage2;
     double currentWeight;
     bool dockReady;
+    double Cost;
 
     SpaceStation * spaceStation;
 public:
     
     SpaceShuttle();
-    SpaceShuttle(Rocket *f_rocket);
+    SpaceShuttle(Rocket *f_rocket,double cost=0.0);
 
     ~SpaceShuttle();
 
     Rocket *rocket; //rocket i'm watching
 
 
+    double getCost();
+    void setCost(double cost);
     double getWeightCapacity();
     bool isStage2();
     double getCurrentWeight();

@@ -16,9 +16,10 @@ SpaceShuttle::~SpaceShuttle()
 }
 
 
-SpaceShuttle::SpaceShuttle(Rocket *f_rocket)
+SpaceShuttle::SpaceShuttle(Rocket *f_rocket,double cost=0.0)
 {
     this->rocket=f_rocket;
+    this->Cost = cost;
 }
 
 double SpaceShuttle::getCurrentWeight()
@@ -97,4 +98,14 @@ void SpaceShuttle::notify()
     */
 
     this->spaceStation->update(); 
+}
+
+void SpaceShuttle::setCost(double cost)
+{
+    Cost = cost;
+}
+
+double SpaceShuttle::getCost()
+{
+    return Cost;
 }

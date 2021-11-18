@@ -10,7 +10,7 @@ class Dragon:public SpaceShuttle {
 
     public:    
         Dragon();
-        Dragon(Rocket *rocket);
+        Dragon(Rocket *rocket,double cost);
 
         ~Dragon();
 

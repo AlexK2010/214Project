@@ -5,8 +5,10 @@ CrewDragon::CrewDragon():SpaceShuttle()
 
 }
 
-CrewDragon::CrewDragon(Rocket *rocket):SpaceShuttle(rocket)
+CrewDragon::CrewDragon(Rocket *rocket,int numHuman, double cost):SpaceShuttle(rocket,cost)
 {   
+    this->numHuman = numHuman;
+    cost*=numHuman;
     //base class will handle initialisation for me
 }
 
