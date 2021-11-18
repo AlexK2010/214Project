@@ -55,7 +55,7 @@ int main(){//add where you like
 
     //cout some introduction and explanation
 
-    //Builder to build everything
+    //Builder to build everything - M
 
     //rocket stuff - demonstrate a failure
     
@@ -68,7 +68,7 @@ int main(){//add where you like
 
     //End off with full explanation of cost vs income
     //Say whether a real life follow up of the sim would be viable
-    
+
 
 
     return 0;
