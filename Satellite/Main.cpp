@@ -4,21 +4,24 @@
 #include <cstdlib>
 
 #include "Satellite.h"
+//Mediator
 #include "Department.h"
+#include "TrajectoryDepartment.h"
+#include "RiskAnalysis.h"
+//Strategy
+#include "SatelliteFunctionality.h"
+#include "ChangeTrajectory.h"
+#include "ToggleSignal.h"
+//Iterator
+#include "SatelliteIterator.h"
+#include "CollectionOfSatellites.h"
+//Observer
 #include "GroundControl.h"
+#include "MaintenanceDepartment.h"
+#include "SignalDepartment.h"
+//Route or Path
 #include "Path.h"
 
-#include "ChangeTrajectory.h"
-#include "CollectionOfSatellites.h"
-#include "MaintenanceDepartment.h"
-#include "RiskAnalysis.h"
-
-#include "SatelliteFunctionality.h"
-#include "SatelliteIterator.h"
-
-#include "SignalDepartment.h"
-#include "ToggleSignal.h"
-#include "TrajectoryDepartment.h"
 
 using namespace std;
 
