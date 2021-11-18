@@ -10,5 +10,5 @@ TrajectoryDepartment::~TrajectoryDepartment(){}
 void TrajectoryDepartment::notify()
 {
     strategy->execute(signalSatellites, 4);
-    cout << "Calculations are done, no clashes within the next 4 hours "  << endl; //unsure
+    cout << "Calculations are done, no clashes within the next 4 hours "  << endl; 
 }
