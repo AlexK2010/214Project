@@ -33,6 +33,13 @@ double RiskAnalysis::calcCost()
         if(it->current()->requireMaintenance==true){cost+=20000;}
     }
     cout << "Doing Calculation 3 of 4..." << endl;
-    
+    cost+=20000;
+    cout << "Doing Calculation 4 of 4..." << endl;
+    cost+=15000;
+    cout << "Finished Full Risk Analysis"<< endl;
+    cout << "Total Cost of Starlink Satellite System: $" << cost << endl;
+    cout << "Expected Revenue is $13 000 000" << endl;
+    if(cost < 13000000)cout << "According to Calculations We will be Profitable" << endl;
+    else cout << "According to Calculations We will not be Profitable" << endl;
 
 }
