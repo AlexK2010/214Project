@@ -12,8 +12,10 @@
 #include "CollectionOfSatellites.h"
 #include "MaintenanceDepartment.h"
 #include "RiskAnalysis.h"
+
 #include "SatelliteFunctionality.h"
 #include "SatelliteIterator.h"
+
 #include "SignalDepartment.h"
 #include "ToggleSignal.h"
 #include "TrajectoryDepartment.h"
