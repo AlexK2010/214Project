@@ -8,14 +8,6 @@ SignalDepartment::SignalDepartment(CollectionOfSatellites* newSat)
 
 void SignalDepartment::update()
 {
-    // if(this->signalSatellite->hasSignal == true) //temp
-    // {
-    //     this->waving = true;
-    // }
-    // else
-    // {
-    //     this->waving = false;
-    // }
     strategy = new ToggleSignal();
     strategy->execute(signalSatellites, 4);
 }

@@ -8,6 +8,7 @@ void ToggleSignal::execute(CollectionOfSatellites* collection, int time)
         while(runner->hasNext()){
             if(it->current()->getPath().getCurrContinent(time) == runner->current()->getPath().getCurrContinent(time)){
                 it->current()->hasSignal = false;
+                cout << "Switching off " << it->current()->name << " signal" << endl;
             }
             runner->next();
         }

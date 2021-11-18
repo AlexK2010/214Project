@@ -1,8 +1,9 @@
 #include "Satellite.h"
 
-Satellite::Satellite(double c)
+Satellite::Satellite(double c, string s)
 {
     this->cost=c;
+    name = s;
 }
 
 Satellite::~Satellite(){};

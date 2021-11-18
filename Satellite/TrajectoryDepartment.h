@@ -8,10 +8,12 @@
 
 class TrajectoryDepartment : public Department{
     public:
-        TrajectoryDepartment(){};
+        SatelliteFunctionality* strategy;
+        CollectionOfSatellites* signalSatellites;
+        TrajectoryDepartment(CollectionOfSatellites*);
         ~TrajectoryDepartment(){};
         //void notify(Satellite *colleague);
-         void notify(CollectionOfSatellites *colleague, int id);
+         void notify();
 };
 
 #endif

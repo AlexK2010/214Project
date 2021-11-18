@@ -29,11 +29,12 @@ class Satellite {
     
     public:
         int timeReleased;
+        string name;
         Path currPath = NULL;
-        bool hasSignal;
-        bool requireMaintenance;
+        bool hasSignal=false;
+        bool requireMaintenance=false;
         Satellite(){}
-        Satellite(double c);
+        Satellite(double c, string s);
         ~Satellite();
         void doFunctionality();
         void detachFromRocket(int t);
