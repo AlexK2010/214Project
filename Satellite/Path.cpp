@@ -65,3 +65,12 @@ string Path::ListCont(){
     ret = ret + getCurrContinent(21);
     return ret;
 }
+
+int Path::getID()
+{
+    return this->id;
+}
+
+void Path::setID(int i){
+    id = i;
+}

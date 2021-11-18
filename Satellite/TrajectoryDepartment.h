@@ -4,14 +4,16 @@
 #include "Satellite.h"
 #include "Path.h"
 #include "ChangeTrajectory.h"
+#include "CollectionOfSatellites.h"
 
 class TrajectoryDepartment : public Department{
-    private:
     public:
-        TrajectoryDepartment(){};
+        SatelliteFunctionality* strategy;
+        CollectionOfSatellites* signalSatellites;
+        TrajectoryDepartment(CollectionOfSatellites*);
         ~TrajectoryDepartment(){};
-        //  void notify(Satellite *colleague);
-         void notify(Satellite *colleague, int id);
+        //void notify(Satellite *colleague);
+         void notify();
 };
 
 #endif

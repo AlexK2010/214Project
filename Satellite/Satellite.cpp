@@ -1,8 +1,9 @@
 #include "Satellite.h"
 
-Satellite::Satellite(double c)
+Satellite::Satellite(double c, string s)
 {
     this->cost=c;
+    name = s;
 }
 
 Satellite::~Satellite(){};
@@ -65,5 +66,20 @@ void Satellite::notify()
     vector<GroundControl*>::iterator it = l.begin();
 	for (it = l.begin(); it != l.end(); ++it)
 		(*it)->update();
+}
+
+Path Satellite::getPath(){
+    return currPath;
+}
+
+void Satellite::setPath(int i){
+    currPath.setID(i);
+}
+
+void Satellite::detachFromRocket(int t){
+    timeReleased = t;
+    currPath.setID(rand() % 5);
+    hasSignal=true;
+    attached=false;
 }
 

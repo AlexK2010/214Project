@@ -21,7 +21,7 @@ class Rocket
         bool RocketStage2; 
     public:
         Rocket();
-        ~Rocket();
+        virtual  ~Rocket();
 
         void attatch(SpaceShuttle * spaceShuttle);
         void detatch(); //only one observer. I see no need to accept an argument.

@@ -24,8 +24,8 @@ SpaceCraftCommand :: ~SpaceCraftCommand()
 {
     if(receiver!=nullptr)
     {
-        delete receiver;
-        receiver = nullptr;
+        receiver = nullptr; //all deletion will be handled by the client
     }
+
     cout << "The Commander is destroyed!" <<endl;
 }

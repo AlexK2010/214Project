@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 #include "Department.h"
 #include "GroundControl.h"
 #include "SatelliteFunctionality.h"
@@ -14,12 +16,11 @@ using namespace std;
 class Satellite {
     private:
         double cost; 
-        bool attached;
+        bool attached=true;;
         Department *currentDepartment;
         Satellite* next;
-        SatelliteFunctionality *strategy;
         GroundControl *GroundControlDep;
-    
+        
         //Observer stuff (used for simulations)
         vector<GroundControl*> l;
         void attach(GroundControl*); //function to add observers to the observerList
@@ -27,23 +28,28 @@ class Satellite {
 		void notify(); //function that should notify all the observers in the observerList
     
     public:
-        Path *currPath;
-        bool hasSignal;
-        bool requireMaintenance;
-        //Satellite();
-        Satellite(double c);
+        int timeReleased;
+        string name;
+        Path currPath = NULL;
+        bool hasSignal=false;
+        bool requireMaintenance=false;
+        Satellite(){}
+        Satellite(double c, string s);
         ~Satellite();
         void doFunctionality();
+        void detachFromRocket(int t);
 
         //getters
         double getCost();
         bool getAttached();
         Satellite* getNext();
+        Path getPath();
 
         //setters
         void setCost(double x);
         void setAttached(bool b);
         void setNext(Satellite*);
+        void setPath(int i);
     
 };
 

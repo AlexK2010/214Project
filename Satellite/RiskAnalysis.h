@@ -2,14 +2,19 @@
 #define RISKANALYSIS_H
 
 #include "Satellite.h"
+#include "CollectionOfSatellites.h"
+#include "ToggleSignal.h"
+#include "ChangeTrajectory.h"
 
 class RiskAnalysis : public Department{
-    private:
+        CollectionOfSatellites* arr;
+        SatelliteFunctionality* strategy1;
+        SatelliteFunctionality* strategy2;
     public:
-        RiskAnalysis(){};
+        RiskAnalysis(CollectionOfSatellites* ){};
         ~RiskAnalysis(){};
-        double calcCost(Satellite *colleague);
-        void notify(Satellite *colleague);
+        double calcCost();
+        void notify();
 };
 
 #endif

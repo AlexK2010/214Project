@@ -13,5 +13,6 @@ class F9Core
     public:
         F9Core(RocketIterator*);
         ~F9Core();
+        void breakEngines(int, int);
 };
 #endif

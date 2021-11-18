@@ -11,6 +11,6 @@ class FalconHeavyFactory: public RocketFactory
     public:
         FalconHeavyFactory(StageCreator*);           //Factory constructed with RSSCreator passed in
         ~FalconHeavyFactory();                       //Destructor nullifies the RSSCreator within this class
-        Rocket* createRocket(StageCreator*);         //Creates the rocket and returns it
+        Rocket* createRocket(int);         //Creates the rocket and returns it
 };
 #endif

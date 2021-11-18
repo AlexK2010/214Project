@@ -17,6 +17,8 @@ Dragon::~Dragon()
 
 void Dragon::update()
 {
+   this->setStage2(rocket->getRocketStage2());
+
    if(isStage2())
    {
        cout<<"Dragon entering stage 2."<<endl;
@@ -29,29 +31,36 @@ void Dragon::update()
       
 }
 
-void Dragon::Thrust()
+void Dragon::thrust()
 {
     cout<<"Dragon engaging thrust. Accelerating"<<endl;
 }
 
-void Dragon::MoveLeft()
+void Dragon::moveLeft()
 {
     cout<<"Dragon Moving Left."<<endl;
 }
 
-void Dragon::MoveRight()
+void Dragon::moveRight()
 {
     cout<<"Dragon Moving Right."<<endl;
 }
 
-void Dragon::Deceleration()
+void Dragon::deceleration()
 {
     cout<<"Dragon reducing thrust. Decelerating."<<endl;
 }
 
-void Dragon::Dock()
+void Dragon::dock()
 {
     cout<<"Dragon Has initiated Docking sequence"<<endl;
+    this->setDockReady(true);
+    this->notify();
+}
+
+void Dragon::notify()
+{
+    SpaceShuttle::notify();
 }
 
 

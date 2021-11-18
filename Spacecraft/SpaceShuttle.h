@@ -7,10 +7,12 @@ using namespace std;
 #include <iostream>
 
 #include "Rocket.h"
+#include "SpaceStation.h"
 
 using namespace std;
 
 class Rocket; //forward declaration Rocket
+class SpaceStation; //forward declertion SpaceSation
 
 class SpaceShuttle{
 
@@ -21,6 +23,7 @@ private:
     bool dockReady;
     double Cost;
 
+    SpaceStation * spaceStation;
 public:
     
     SpaceShuttle();
@@ -43,17 +46,29 @@ public:
     void setCurrentWeight(double);
     void setDockReady(bool);
 
+    /*
+        Observer stuff
+    */
+
     virtual void update()=0;
     void registerRocket(Rocket * f_rocket);
 
     /*
-    Command Functions!!!
+        Command Functions!!!
     */
-    virtual void Deceleration()=0;
-    virtual void MoveLeft()=0;
-    virtual void MoveRight()=0;
-    virtual void Dock()=0;
-    virtual void Thrust()=0;
+    virtual void deceleration()=0;
+    virtual void moveLeft()=0;
+    virtual void moveRight()=0;
+    virtual void dock()=0;
+    virtual void thrust()=0;
+
+    /*
+        Subject stuff-SpaceStation
+    */
+
+   void attatch(SpaceStation * spaceStation);
+   void detatch();
+   void notify();
 
 };
 

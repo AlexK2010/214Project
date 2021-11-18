@@ -2,15 +2,18 @@
 #include <iostream>
 
 using namespace std;
-Thrust :: Thrust()
-{}
+
+Thrust :: Thrust():SpaceCraftCommand()
+{
+
+}
 
 void Thrust :: execute()
 {
-    getReceiver()->Thrust();
+    getReceiver()->thrust();
 }
 
-Thrust :: Thrust()
+Thrust::~Thrust()
 {
-    cout << "Thrust is DONE!" <<endl;
+    cout<<"Thrust Destroyed"<<endl;   
 }

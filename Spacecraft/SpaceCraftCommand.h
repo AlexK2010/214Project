@@ -8,9 +8,14 @@ class SpaceCraftCommand{
         SpaceShuttle* receiver;
     public:
         SpaceCraftCommand();
+
+        virtual ~SpaceCraftCommand();
+
         virtual void execute()=0;
+
         void setReceiver(SpaceShuttle* s);
+        
         SpaceShuttle* getReceiver();
-        ~SpaceCraftCommand();
+        
 };
 #endif

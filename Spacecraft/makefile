@@ -2,7 +2,7 @@ CC=g++
 CFLAG=-Wall	-Werror
 LFLAGS=-static
 TARGET=	action
-OBJECTS=Main.o	Rocket.o	SpaceShuttle.o	CrewDragon.o	Dragon.o	SpaceCraftCommand.o Button.o Deceleration.o Dock.o MoveLeft.o MoveRight.o Thrust.o 
+OBJECTS=Main.o	Rocket.o	SpaceShuttle.o	CrewDragon.o	Dragon.o	InternationalSpaceStation.o	SpaceStation.o	SpaceCraftCommand.o	MoveLeft.o	MoveRight.o	Thrust.o	Dock.o	Button.o	Deceleration.o
 
 all:	$(OBJECTS)
 	$(CC)	$(CFLAGS)	$(OBJECTS)	-o	$(TARGET)
@@ -15,21 +15,25 @@ CrewDragon.o:	CrewDragon.h
 
 SpaceShuttle.o:	SpaceShuttle.h
 
-SpaceCraftCommand.o: SpaceCraftCommand.h
+InternationalSpaceStation.o:	InternationalSpaceStation.h
 
-Button.o: Button.h
+SpaceStation.o:	SpaceStation.h
 
-Deceleration.o: Deceleration.h
+SpaceCraftCommand.o:	SpaceCraftCommand.h
 
-Dock.o: Dock.h
+MoveLeft.o:	MoveLeft.h
 
-MoveLeft.o: MoveLeft.h 
+MoveRight.o:	MoveRight.h
 
-MoveRight.o: MoveRight.h 
+Deceleration.o:	Deceleration.h
 
-Thrust.o: Thrust.h
+Thrust.o:	Thrust.h
 
-Main.o:		Dragon.h	CrewDragon.h	SpaceShuttle.h	Rocket.h SpaceCraftCommand.h Button.h Deceleration.h Dock.h MoveLeft.h MoveRight.h Thrust.h
+Dock.o:	Dock.h
+
+Button.o:	Button.h
+
+Main.o:		Dragon.h	CrewDragon.h	SpaceShuttle.h	Rocket.h	InternationalSpaceStation.h	SpaceStation.h	SpaceCraftCommand.h	MoveLeft.h	MoveRight.h	Thrust.h	Dock.h	Button.h	Deceleration.h	
 
 %.o:	%.cpp
 	$(CC)	$<	$(CFLAGS)	-c	-g	-o	$@

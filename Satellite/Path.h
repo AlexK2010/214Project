@@ -10,5 +10,8 @@ class Path{
     ~Path();
     string getCurrContinent(int time);
     string ListCont();
+  public:
+    int getID();
+    void setID(int i);
 };
 #endif
