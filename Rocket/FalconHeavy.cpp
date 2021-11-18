@@ -1,12 +1,13 @@
 #include "FalconHeavy.h"
 #include "EngineObserver.h"
 #include "RocketFirstStage.h"
+#include "SatelliteIterator.h"
 #include <iostream>
 
 using namespace std;
 
-FalconHeavy::FalconHeavy(StageCreator* sc, int attWeight){
-    obsList = new EngineObserver*[28];              //Number of observers = number of cores * 27 + 1
+FalconHeavy::FalconHeavy(StageCreator* sc, CollectionOfSatellites* colOfSat = nullptr){
+    obsList = new EngineObserver*[28];              //Number of observers = number of engines * 27 + 1
     for (int i = 0; i < 28; i++)
         obsList[i] = new EngineObserver();
     obsIter = new EOIterator(obsList, 28);
@@ -14,8 +15,10 @@ FalconHeavy::FalconHeavy(StageCreator* sc, int attWeight){
     fs = new RocketFirstStage(true, obsIter);
     ss = sc->createRSS(obsIter);
     numEnginesFailed = 0;
-    landed = false;
-    attachedWeight = attWeight;
+    cost = 28 * 100000 + 3 * 50000 + 2 * 200000;
+    payloadType = (colOfSat != nullptr);
+    colSat = colOfSat;
+    carryWeight = 3 * 60 * 1000;
 }
 
 FalconHeavy::~FalconHeavy(){
@@ -28,7 +31,19 @@ FalconHeavy::~FalconHeavy(){
 }
 
 bool FalconHeavy::fly(){
-    landed = false;
+    if(payloadType){
+        int numSat = 1;
+        SatelliteIterator* temp = colSat->createSatelliteIterator();
+        while(temp->hasNext()){
+            numSat++;
+            temp->next();   
+        }
+        attachedWeight = numSat * 1000;
+        delete temp;
+    }else{
+        attachedWeight = spaceS->getCurrentWeight();
+    }
+
     cout<<"Falcon Heavy rocket preparing for launch"<<endl;
     fs->breakEngines(carryWeight, attachedWeight);
     numEnginesFailed = obsIter->checkEngines();
@@ -48,9 +63,10 @@ bool FalconHeavy::fly(){
     }
     
     cout<<"Rocket's first stage detached."<<endl;
-    landed = fs->land();
+    cost -= fs->land();
     
     cout<<"Proceeding to attempt to reach desired orbit."<<endl;
+    ss->breakEngine(carryWeight, attachedWeight);
     if(obsIter->checkVacEngine()){
         cout<<"Vacuum engine failed during flight."<<endl;
         cout<<"Rocket failed to reach desired orbit."<<endl;
@@ -58,5 +74,9 @@ bool FalconHeavy::fly(){
     }
 
     cout<<"Rocket reached desired orbit. Payload has detached safely."<<endl;
+    if(!payloadType){
+        notify();
+        detach();
+    }
     return true;
 }

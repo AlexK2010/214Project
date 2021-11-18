@@ -1,5 +1,6 @@
 #ifndef COMPONENTBUILDER_H
 #define COMPONENTBUILDER_H
+
 #include "Satellite/Satellite.h"
 #include "Rocket/Rocket.h"
 #include "Spacecraft/Dragon.h"
@@ -21,5 +22,4 @@ class ComponentBuilder{
         virtual Dragon* buildDragon()=0;
         virtual CrewDragon* buildCrewDragon()=0;
 };
-
 #endif
