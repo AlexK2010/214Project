@@ -6,14 +6,13 @@
 class CrewDragon:public SpaceShuttle {
     
     private:
-
+        int numHuman;
 
     public:    
         CrewDragon();
-        CrewDragon(Rocket *rocket);
+        CrewDragon(Rocket *rocket, int numHuman, double cost);
 
         ~CrewDragon();
-
         virtual void update();
 
         virtual void Deceleration();

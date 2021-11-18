@@ -5,7 +5,7 @@ Dragon::Dragon():SpaceShuttle()
 
 }
 
-Dragon::Dragon(Rocket *rocket):SpaceShuttle(rocket)
+Dragon::Dragon(Rocket *rocket, double cost):SpaceShuttle(rocket,cost)
 {   
     //base class will handle initialisation for me
 }
