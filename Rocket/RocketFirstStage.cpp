@@ -11,6 +11,7 @@ RocketFirstStage::RocketFirstStage(bool type, RocketIterator* obList){
         coreList = new F9Core*[1];
         numCores = 1;
     }
+    obList->first();
     for(int i = 0; i<numCores; i++)
         coreList[i] = new F9Core(obList);
     obsList = obList;
@@ -25,10 +26,11 @@ RocketFirstStage::~RocketFirstStage(){
 
 double RocketFirstStage::land(){
     int numEng = numCores * 9;
-    if(numEng / obsList->checkEngines()<3){
-        cout<<"Landing of rocket first stage unsuccessful."<<endl;
-        return 0;
-    }
+    if(obsList->checkEngines() != 0)
+        if(numEng / obsList->checkEngines()<3){
+            cout<<"Landing of rocket first stage unsuccessful."<<endl;
+            return 0;
+        }
     double cost = 0;
     cost += (numEng - obsList->checkEngines()) * 50000;         //Cost reduced on number of engines not broken
     
@@ -40,8 +42,9 @@ double RocketFirstStage::land(){
                 numBroken++;
             obsList->next();
         }
-        if(!(9 / numBroken < 3))
-            cost += 25000;                                      //Cost reduced on the number of cores not broken
+        if(numBroken != 0)
+            if(!(9 / numBroken < 3))
+                cost += 25000;                                      //Cost reduced on the number of cores not broken
     }
 
     if((numEng - obsList->checkEngines()) >= (numEng - numCores))
@@ -51,7 +54,7 @@ double RocketFirstStage::land(){
     return cost;
 }
 
-void RocketFirstStage::breakEngines(int cw, int aw){
+void RocketFirstStage::breakEngines(long cw, long aw){
     for(int i = 0; i<numCores; i++)
         coreList[i]->breakEngines(cw, aw);
 }

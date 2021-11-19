@@ -13,6 +13,6 @@ class F9Core
     public:
         F9Core(RocketIterator*);        //Constructor
         ~F9Core();                      //Destructo
-        void breakEngines(int, int);    //Function that iterates through all the engines and check if it breaks
+        void breakEngines(long, long);    //Function that iterates through all the engines and check if it breaks
 };
 #endif

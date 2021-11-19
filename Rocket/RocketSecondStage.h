@@ -14,6 +14,6 @@ class RocketSecondStage : public RocketStage
     public:
         RocketSecondStage(RocketIterator*); //Constructor
         ~RocketSecondStage();               //Destructor
-        void breakEngine(int, int);         //Checks if engine breaks
+        void breakEngine(long, long);         //Checks if engine breaks
 };
 #endif

@@ -17,7 +17,7 @@ class RocketFirstStage : public RocketStage
         RocketFirstStage(bool, RocketIterator*);        //Boolean parameter determines rocket type: Falcon9-F/FalconHeavy-T
         ~RocketFirstStage();                            //Destructor
         double land();                                  //Returns a value that gets returned to cost depending on how many engines broke
-        void breakEngines(int, int);                    //Calls break engines in Rocket iterator
-        void breakEngine(int, int){};                   //Just here because of the rocket stage virtual function
+        void breakEngines(long, long);                    //Calls break engines in Rocket iterator
+        void breakEngine(long, long){};                   //Just here because of the rocket stage virtual function
 };
 #endif

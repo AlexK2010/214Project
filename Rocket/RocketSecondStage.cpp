@@ -6,13 +6,14 @@ using namespace std;
 
 RocketSecondStage::RocketSecondStage(RocketIterator* ri){
     vacEng = new VacuumEngine(ri);
+    vacEng->attach();
 }
 
 RocketSecondStage::~RocketSecondStage(){
     delete vacEng;
 }
 
-void RocketSecondStage::breakEngine(int cw, int aw){
+void RocketSecondStage::breakEngine(long cw, long aw){
     double breakChance;
     if(aw<cw)
         breakChance = 0.02;
