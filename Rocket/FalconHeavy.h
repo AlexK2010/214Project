@@ -8,7 +8,7 @@ using namespace std;
 class FalconHeavy: public Rocket
 {
     public:
-        FalconHeavy(StageCreator*, int);
+        FalconHeavy(StageCreator*, CollectionOfSatellites*);
         ~FalconHeavy();
         bool fly();     //Causes the engines to be checked at launch and at the end of flight
 };

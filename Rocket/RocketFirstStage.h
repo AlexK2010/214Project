@@ -16,7 +16,7 @@ class RocketFirstStage : public RocketStage
     public:
         RocketFirstStage(bool, RocketIterator*);        //Boolean parameter determines rocket type: Falcon9-F/FalconHeavy-T
         ~RocketFirstStage();
-        bool land();
+        double land();
         void breakEngines(int, int);
         void breakEngine(int, int){};                   //Just here because of the rocket stage virtual function
 };

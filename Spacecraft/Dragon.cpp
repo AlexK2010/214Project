@@ -5,9 +5,11 @@ Dragon::Dragon():SpaceShuttle()
 
 }
 
-Dragon::Dragon(Rocket *rocket, double cost):SpaceShuttle(rocket,cost)
+Dragon::Dragon(Rocket *rocket):SpaceShuttle(rocket)
 {   
     //base class will handle initialisation for me
+    this->setCost(25000000);
+    
 }
 
 Dragon::~Dragon()

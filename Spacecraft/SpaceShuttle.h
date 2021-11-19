@@ -27,7 +27,7 @@ private:
 public:
     
     SpaceShuttle();
-    SpaceShuttle(Rocket *f_rocket,double cost=0.0);
+    SpaceShuttle(Rocket *f_rocket);
 
     ~SpaceShuttle();
 
