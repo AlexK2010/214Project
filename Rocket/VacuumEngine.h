@@ -8,8 +8,8 @@ using namespace std;
 class VacuumEngine : public Engine
 {
     public:
-        VacuumEngine(RocketIterator*);
-        ~VacuumEngine();
+        VacuumEngine(RocketIterator*);  //Constructor
+        ~VacuumEngine();                //Destructor
         void attach();                  //Attaches the next observer to this engine
         void notify();                  //Notifies observer that the engine has failed
 };

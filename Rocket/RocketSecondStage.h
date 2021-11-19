@@ -10,10 +10,10 @@ using namespace std;
 class RocketSecondStage : public RocketStage
 {
     private:
-        Engine* vacEng;
+        Engine* vacEng;                     //Single vacuum engine in the stage
     public:
-        RocketSecondStage(RocketIterator*);
-        ~RocketSecondStage();
-        void breakEngine(int, int);
+        RocketSecondStage(RocketIterator*); //Constructor
+        ~RocketSecondStage();               //Destructor
+        void breakEngine(int, int);         //Checks if engine breaks
 };
 #endif

@@ -9,8 +9,8 @@ using namespace std;
 class FalconHeavyFactory: public RocketFactory
 {
     public:
-        FalconHeavyFactory(StageCreator*);           //Factory constructed with RSSCreator passed in
-        ~FalconHeavyFactory();                       //Destructor nullifies the RSSCreator within this class
-        Rocket* createRocket(int);         //Creates the rocket and returns it
+        FalconHeavyFactory(StageCreator*);          //Factory constructed with RSSCreator passed in
+        ~FalconHeavyFactory();                      //Destructor nullifies the RSSCreator within this class
+        Rocket* createRocket(CollectionOfSatellites*);                  //Creates the rocket and returns it
 };
 #endif

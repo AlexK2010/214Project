@@ -10,15 +10,6 @@
 #include "CollectionOfSatellites.h"
 #include "SpaceShuttle.h"
 
-//SpaceCraft
-#include "../Spacecraft/SpaceShuttle.h"
-
-//Satellites
-
-class SpaceShuttle; //forwrad Declarations of Space Shuttle
-
-
-
 using namespace std;
 
 class Rocket
@@ -35,12 +26,11 @@ class Rocket
         SpaceShuttle* spaceS;               //Space craft gets attached here
         double cost;                        //Cost of the rocket
     public:
-        EOIterator* obsIter;        //Iterator for the engine Observers
-        virtual bool fly() = 0;     //Causes the engines to be checked at launch and at the end of flight
-        void attach(SpaceShuttle * spaceShuttle);
-        void detach(); 
-        void notify();
-        int getCost();
-        void reduceCost(int);
+        EOIterator* obsIter;                //Iterator for the engine Observers
+        virtual bool fly() = 0;             //Causes the engines to be checked at launch and at the end of flight
+        void attach(SpaceShuttle * spaceShuttle);   //Attaches a space shuttle to the rocket
+        void detach();                              //Deataches the space shuttle
+        void notify();                              //Notifies the space shuttle stage 2 has been detached
+        int getCost();                              //Reeturns the cost of the rocket
 };
 #endif

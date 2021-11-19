@@ -4,6 +4,8 @@
 #include <stdlib.h>
 
 //builders
+#include "Director.h"
+#include "ComponentBuilder.h"
 #include "RocketBuilder.h"
 #include "SatelliteBuilder.h"
 #include "SpacecraftBuilder.h"
@@ -56,8 +58,35 @@ int main(){//add where you like
     //cout some introduction and explanation
 
     //Builder to build everything - M
+    /* 
+    Construct a director with parameters. 
+        First parameter is a boolean for rocket type (true=Falcon9, false=FalconHeavy).
+        Second parameter is for the payload
+            If payload is a collection of satellites:
+                pass in number of satellites to be constructed
+            If payload is a spacecraft:
+                pass in true or false (true=dragon, false=crewdragon)
+                third parameter for number of people (if it is a dragon then this parameter is ignored)
+    */
+    Director* director = new Director(true, 60);
+    Director* director2 = new Director(false, true, 20);
+
+    /*
+        Using Director:
+            There is a getter function for every relevant part (Rocket, CollectionOfSatellites, Spacecraft).
+            Just use the getter to get the object you need and from there you should be able to access it normally.
+
+        Using Rocket:
+            There is a fly function in rocket that will launch the rocket, checking for engine failures along the way and outputting them.
+            fly() returns a boolean - If the flight is successful, true is returned and that means the payload is detached and everything else can carry on as normal for you guys.
+                                      If the flight is unsuccessful, the launch is a failure and retry
+            getCost() returns the cost of the rocket - this does not include the payload's cost. 
+            The cost gets reduced during fly() based on the rocket's first stage landing successfully or not.
+    */
 
     //rocket stuff - demonstrate a failure
+    /* to make the rocket fail a spacecraft with a ridiculously high weight should be attached to the rocket. 
+    Then the chance for engines to fail will be over 100% and all of the engines will fail on attempt to fly. */
     
     //spacecraft stuff - operate a mission
     //cout something to screen to show what mission was, how it was done and the cost and objective

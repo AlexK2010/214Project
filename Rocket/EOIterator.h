@@ -18,7 +18,7 @@ class EOIterator : public RocketIterator
         void next();                    //Navigates to the next observer in the list
         bool isDone();                  //Returns a bool if it is at the end of the list
         RocketObserver* currentItem();  //Returns the current engine observer
-        int checkEngines();
-        bool checkVacEngine();
+        int checkEngines();             //Returns the total broken engines
+        bool checkVacEngine();          //Checks if vacuum engine broke
 };
 #endif

@@ -31,6 +31,7 @@ FalconHeavy::~FalconHeavy(){
 }
 
 bool FalconHeavy::fly(){
+    cost = 28 * 100000 + 3 * 50000 + 2 * 200000;
     if(payloadType){
         int numSat = 1;
         SatelliteIterator* temp = colSat->createSatelliteIterator();

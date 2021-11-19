@@ -30,6 +30,7 @@ Falcon9::~Falcon9(){
 }
 
 bool Falcon9::fly(){
+    cost = 10 * 100000 + 50000 + 2 * 200000;
     if(payloadType){
         int numSat = 1;
         SatelliteIterator* temp = colSat->createSatelliteIterator();

@@ -9,9 +9,9 @@ using namespace std;
 class Engine
 {
     protected:
-        RocketIterator* obsIter;
-        RocketObserver* obs;
-        bool status;
+        RocketIterator* obsIter;        //Iterator of all the engines
+        RocketObserver* obs;            //Observer that gets iterated
+        bool status;                    //Status of the engine F-running/T-broken
     public:
         virtual void attach() = 0;      //Attaches the next observer to this engine
         virtual void notify() = 0;      //Notifies observer that the engine has failed
