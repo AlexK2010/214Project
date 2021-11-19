@@ -10,7 +10,6 @@ class MaintenanceDepartment : public GroundControl, public Satellite{
         Satellite* signalSatellite;
         MaintenanceDepartment(Satellite*);
         void update();
-        void print();
         bool waving;
 };
 #endif

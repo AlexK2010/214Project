@@ -11,7 +11,7 @@ class TrajectoryDepartment : public Department{
         SatelliteFunctionality* strategy;
         CollectionOfSatellites* signalSatellites;
         TrajectoryDepartment(CollectionOfSatellites*);
-        ~TrajectoryDepartment(){};
+        ~TrajectoryDepartment();
         //void notify(Satellite *colleague);
          void notify();
 };

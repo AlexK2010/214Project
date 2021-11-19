@@ -1,7 +1,11 @@
 #include "Satellite.h"
 
+
+Satellite::Satellite(){}
+
 Satellite::Satellite(double c, string s)
 {
+    next = nullptr;
     this->cost=c;
     name = s;
 }
@@ -78,7 +82,7 @@ void Satellite::setPath(int i){
 
 void Satellite::detachFromRocket(int t){
     timeReleased = t;
-    currPath.setID(rand() % 5);
+    currPath.setID(rand() % 4 + 1);
     hasSignal=true;
     attached=false;
 }

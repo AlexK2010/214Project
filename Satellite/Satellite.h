@@ -30,10 +30,10 @@ class Satellite {
     public:
         int timeReleased;
         string name;
-        Path currPath = NULL;
+        Path currPath;
         bool hasSignal=false;
         bool requireMaintenance=false;
-        Satellite(){}
+        Satellite();
         Satellite(double c, string s);
         ~Satellite();
         void doFunctionality();

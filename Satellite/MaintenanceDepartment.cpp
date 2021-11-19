@@ -7,24 +7,6 @@ MaintenanceDepartment::MaintenanceDepartment(Satellite* newSat)
 
 void MaintenanceDepartment::update()
 {
-    if(this->signalSatellite->requireMaintenance == true)
-    {
-        this->waving = true;
-    }
-    else
-    {
-        this->waving = false;
-    }
-}
-
-void MaintenanceDepartment::print()
-{
-    if(waving == true)
-    {
-        cout << "Requires Maintenance!" << endl;
-    }
-    else
-    {
-        cout << "Does Not Require Maintenance!" << endl;
-    }
+    signalSatellite->requireMaintenance = false;
+    cout << "Maintenance has been completed on " << signalSatellite->name << ". The satellite is fully functional. " << endl;
 }

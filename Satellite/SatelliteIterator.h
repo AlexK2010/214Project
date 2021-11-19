@@ -2,6 +2,9 @@
 #define SATELLITEITERATOR_H
 
 #include "CollectionOfSatellites.h"
+#include "Satellite.h"
+
+class Satellite;
 
 class SatelliteIterator{
     Satellite* firstS;
