@@ -50,6 +50,16 @@
 #include "Spacecraft/Dock.h"
 #include "Spacecraft/Dragon.h"
 #include "Spacecraft/InternationalSpaceStation.h"
+#include "Spacecraft/MoveLeft.h"
+#include "Spacecraft/MoveRight.h"
+#include "Spacecraft/Thrust.h"
+#include "Spacecraft/Deceleration.h"
+
+
+//forward declaring section
+
+class CollectionOfSatellites;
+
 
 using namespace std;
 
@@ -69,7 +79,7 @@ int main(){//add where you like
                 third parameter for number of people (if it is a dragon then this parameter is ignored)
     */
     Director* director = new Director(true, 60);
-    Director* director2 = new Director(false, true, 20);
+    Director* director2 = new Director(false, true, 4);
 
     /*
         Using Director:
@@ -91,12 +101,86 @@ int main(){//add where you like
     //spacecraft stuff - operate a mission
     //cout something to screen to show what mission was, how it was done and the cost and objective
 
+    cout<<"Building the SpaceShip: Falcon 9 + Dragon"<<endl;
+
+    Rocket *F9=director2->getRocket();
+    SpaceShuttle * dragon=director2->getSpaceCraft();
+    
+    //spaceStation
+    
+    SpaceStation * ISS=new InternationalSpaceStation(dragon);
+
+    //create commands to be used
+
+    SpaceCraftCommand* moveLeft = new MoveLeft();
+    SpaceCraftCommand* moveRight = new MoveRight();
+    SpaceCraftCommand* thrust = new Thrust();
+    SpaceCraftCommand* deceleration=new Deceleration();
+    SpaceCraftCommand* dock=new Dock();
+
+    Button* button = new Button(thrust);
+
+    F9->fly();
+
+    cout<<"SpaceCraft Manuevering towards the spaceStation"<<endl;
+
+    //this section maps the commands to the reciever
+
+    moveLeft->setReceiver(dragon);
+    moveRight->setReceiver(dragon);
+    thrust->setReceiver(dragon);
+    deceleration->setReceiver(dragon); 
+    dock->setReceiver(dragon);
+
+    //initial Thrust
+    button->press();
+
+    button->setCommand(moveLeft);
+    button->press();
+
+    button->setCommand(moveRight);
+    button->press();
+
+    button->setCommand(thrust);
+    button->press();
+
+    button->setCommand(moveRight);
+    button->press();
+
+    button->setCommand(deceleration);
+    button->press();
+    
+    cout<<endl;
+
+    cout<<"Docking on the ISS"<<endl;
+
+    button->setCommand(dock); //docking sequesce done through button
+    button->press();
+
+    cout<<endl;
+
+
+
+
     //Rockets detach the satellites
     //Do full simulation of launching 60 satellites into orbit
     //monitor them, Perform department operations
 
     //End off with full explanation of cost vs income
     //Say whether a real life follow up of the sim would be viable
+
+
+
+
+    //delete stuff
+    delete ISS;
+    delete button;
+    delete moveRight;
+    delete moveLeft;
+    delete thrust;
+    delete deceleration;
+    delete dock;
+    
 
 
 

@@ -7,7 +7,6 @@ Dragon::Dragon():SpaceShuttle()
 
 Dragon::Dragon(Rocket *rocket):SpaceShuttle(rocket)
 {   
-    //base class will handle initialisation for me
     this->setCost(25000000);
     
 }
@@ -19,9 +18,8 @@ Dragon::~Dragon()
 
 void Dragon::update()
 {
-   this->setStage2(rocket->getRocketStage2());
-
-   if(isStage2())
+   
+    if(rocket->fly()) //if no failure occured
    {
        cout<<"Dragon entering stage 2."<<endl;
        cout<<"Merlin Engine detaching."<<endl;

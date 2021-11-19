@@ -3,7 +3,8 @@
 
 using namespace std;
 
-Director::Director(bool rocketType, int numSat){
+Director::Director(bool rocketType, int numSat)
+{
     ComponentBuilder* rocketBuilder = new RocketBuilder();
     ComponentBuilder* satBuilder = new SatelliteBuilder();
     satellites = satBuilder->buildSatellites(numSat);
@@ -16,18 +17,22 @@ Director::Director(bool rocketType, int numSat){
     spaceCraft = nullptr;
 }
 
-Director::Director(bool rocketType, bool scType, int numPeople = 0){
+Director::Director(bool rocketType, bool scType, int numPeople = 0)
+{
     ComponentBuilder* rocketBuilder = new RocketBuilder();
     ComponentBuilder* spacecraftBuilder = new SpacecraftBuilder();
     StageCreator* secondStageCreator = new RSSCreator();
+
     if(rocketType)
         carrier = rocketBuilder->buildFalcon9(secondStageCreator);
     else
         carrier = rocketBuilder->buildFalconHeavy(secondStageCreator);
+
     if(scType)
         spaceCraft = spacecraftBuilder->buildDragon(carrier);
     else
         spaceCraft = spacecraftBuilder->buildCrewDragon(carrier, numPeople);
+
     carrier->attach(spaceCraft);
 
     satellites = nullptr;

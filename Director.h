@@ -1,10 +1,19 @@
 #ifndef DIRECTOR_H
 #define DIRECTOR_H
 
+//componentBuilder
 #include "ComponentBuilder.h"
+
+//Rocket Stuff
 #include "RocketBuilder.h"
+
+//satellite stuff
 #include "SatelliteBuilder.h"
+
+//spaceCraft stuff
 #include "SpacecraftBuilder.h"
+
+
 
 #include "iostream"
 

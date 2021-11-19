@@ -5,6 +5,10 @@
 #include "Satellite/CollectionOfSatellites.h"
 #include "Satellite/Satellite.h"
 
+//forward declaring section
+
+class CollectionOfSatellites;
+
 class SatelliteBuilder : public ComponentBuilder{
     public:
         CollectionOfSatellites* buildSatellites(int);

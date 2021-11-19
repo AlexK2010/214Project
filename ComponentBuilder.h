@@ -1,13 +1,26 @@
 #ifndef COMPONENTBUILDER_H
 #define COMPONENTBUILDER_H
 
-#include "Satellite/Satellite.h"
+//rocket
+#include "Rocket/StageCreator.h"
 #include "Rocket/Rocket.h"
+
+//satellites
+#include "Satellite/Satellite.h"
+#include "Satellite/CollectionOfSatellites.h"
+
+//spaceCraft
 #include "Spacecraft/Dragon.h"
 #include "Spacecraft/CrewDragon.h"
-#include "Rocket/StageCreator.h"
+#include "Spacecraft/SpaceShuttle.h"
 
 #include <iostream>
+
+//forward declaring section
+
+class CollectionOfSatellites;
+
+
 
 using namespace std;
 

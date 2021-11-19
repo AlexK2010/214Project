@@ -7,8 +7,8 @@
 #include "RocketStage.h"
 #include "RocketFirstStage.h"
 #include "StageCreator.h"
-#include "CollectionOfSatellites.h"
-#include "SpaceShuttle.h"
+#include "../Satellite/CollectionOfSatellites.h"
+#include "../Spacecraft/SpaceShuttle.h"
 #include "EngineObserver.h"
 
 using namespace std;
@@ -29,6 +29,8 @@ class Rocket
         SpaceShuttle* spaceS;               //Space craft gets attached here
         double cost;                        //Cost of the rocket
     public:
+        Rocket();
+        virtual ~Rocket();                   //Added a virtual destructor for my sanity's sake
         EOIterator* obsIter;                //Iterator for the engine Observers
         virtual bool fly() = 0;             //Causes the engines to be checked at launch and at the end of flight
         void attach(SpaceShuttle * spaceShuttle);   //Attaches a space shuttle to the rocket
