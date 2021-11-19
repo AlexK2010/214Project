@@ -44,10 +44,10 @@ int main() {
     Satellite* sat4 = new Satellite(250000, "sat4");
     Satellite* sat5 = new Satellite(250000, "sat5");
     sat1->detachFromRocket(1);
-    sat2->detachFromRocket(1);
-    sat3->detachFromRocket(1);
-    sat4->detachFromRocket(1);
-    sat5->detachFromRocket(1);
+    sat2->detachFromRocket(2);
+    sat3->detachFromRocket(3);
+    sat4->detachFromRocket(4);
+    sat5->detachFromRocket(5);
 
     //make them in a collection of satellites
     CollectionOfSatellites* arr = new CollectionOfSatellites();
@@ -62,17 +62,17 @@ int main() {
     signalDep->update();
     
     //trajectory department
-    sat1->currPath.setID(1);
+    /*sat1->currPath.setID(1);
     sat2->currPath.setID(1);
     sat3->currPath.setID(2);
     sat4->currPath.setID(3);
-    sat5->currPath.setID(4);
+    sat5->currPath.setID(4);*/
 
-    cout << sat1->currPath.getID();
+    /*cout << sat1->currPath.getID();
     cout << sat2->currPath.getID();
     cout << sat3->currPath.getID();
     cout << sat4->currPath.getID();
-    cout << sat5->currPath.getID();
+    cout << sat5->currPath.getID();*/
 
     TrajectoryDepartment* trajDep = new TrajectoryDepartment(arr);
     trajDep->notify();
