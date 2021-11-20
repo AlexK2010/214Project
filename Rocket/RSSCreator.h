@@ -8,7 +8,7 @@ using namespace std;
 class RSSCreator : public StageCreator
 {
     public:
-        RSSCreator();
-        RocketStage* createRSS(RocketIterator*);     //Creates the rocket's second stage and returns it
+        RSSCreator();                                   //Constructor
+        RocketStage* createRSS(RocketIterator*);        //Creates the rocket's second stage and returns it
 };
 #endif

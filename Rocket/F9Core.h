@@ -9,10 +9,10 @@ using namespace std;
 class F9Core
 {
     private:
-        Engine** engList;              //List of Engines - always 9
+        Engine** engList;               //List of Engines - always 9
     public:
-        F9Core(RocketIterator*);
-        ~F9Core();
-        void breakEngines(int, int);
+        F9Core(RocketIterator*);        //Constructor
+        ~F9Core();                      //Destructo
+        void breakEngines(long, long);    //Function that iterates through all the engines and check if it breaks
 };
 #endif

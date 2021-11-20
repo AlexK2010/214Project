@@ -11,6 +11,6 @@ FalconHeavyFactory::~FalconHeavyFactory(){
     ssCreator = nullptr;
 }
 
-Rocket* FalconHeavyFactory::createRocket(int aw){
-    return new FalconHeavy(ssCreator, aw);
+Rocket* FalconHeavyFactory::createRocket(CollectionOfSatellites* colSat){
+    return new FalconHeavy(ssCreator, colSat);
 }

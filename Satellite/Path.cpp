@@ -3,6 +3,7 @@
 Path::Path(int a){
     id = a;
 }
+Path::Path(){}
 Path::~Path(){
 
 }

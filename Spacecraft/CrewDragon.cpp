@@ -5,11 +5,10 @@ CrewDragon::CrewDragon():SpaceShuttle()
 
 }
 
-CrewDragon::CrewDragon(Rocket *rocket,int numHuman, double cost):SpaceShuttle(rocket,cost)
+CrewDragon::CrewDragon(Rocket *rocket,int f_numHuman):SpaceShuttle(rocket)
 {   
-    this->numHuman = numHuman;
-    cost*=numHuman;
-    //base class will handle initialisation for me
+    this->numHuman = f_numHuman;
+    this->setCost(55000000*numHuman); //55 million per head
 }
 
 CrewDragon::~CrewDragon()
@@ -20,9 +19,8 @@ CrewDragon::~CrewDragon()
 
 void CrewDragon::update()
 {
-   this->setStage2(rocket->getRocketStage2());
 
-   if(isStage2())
+   if(rocket->fly())
    {
         cout<<"Crew Dragon entering stage 2."<<endl;
         cout<<"Merlin Engine detaching."<<endl;

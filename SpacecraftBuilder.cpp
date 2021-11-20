@@ -1,11 +1,9 @@
 #include "SpacecraftBuilder.h"
 
-CrewDragon* SpacecraftBuilder::buildCrewDragon(){
-    //do your constructor Spacecraft team
-    
+CrewDragon* SpacecraftBuilder::buildCrewDragon(Rocket* r, int numPeople){
+    return new CrewDragon(r, numPeople);
 }
 
-Dragon* SpacecraftBuilder::buildDragon(){
-    //do your constructor Spacecraft team
-    
+Dragon* SpacecraftBuilder::buildDragon(Rocket* r){
+    return new Dragon(r);
 }

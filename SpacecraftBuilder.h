@@ -2,12 +2,12 @@
 #define SPACECRAFTBUILDER_H
 
 #include "ComponentBuilder.h"
+#include "Spacecraft/CrewDragon.h"
+#include "Spacecraft/Dragon.h"
 
-class SpacecraftBuilder : ComponentBuilder{
-    CrewDragon* newCrew;
-    Dragon* newDragon;
+class SpacecraftBuilder : public ComponentBuilder{
     public:
-        CrewDragon* buildCrewDragon();
-        Dragon* buildDragon();
+        CrewDragon* buildCrewDragon(Rocket*, int);
+        Dragon* buildDragon(Rocket*);
 };
 #endif

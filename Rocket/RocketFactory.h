@@ -11,6 +11,6 @@ class RocketFactory
     protected:
         StageCreator* ssCreator;                  //Factory for Rocket second stage
     public:
-        virtual Rocket* createRocket(int) = 0;    //Creates the rocket and returns it
+        virtual Rocket* createRocket(CollectionOfSatellites*) = 0;    //Creates the rocket and returns it
 };
 #endif

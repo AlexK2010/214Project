@@ -14,7 +14,7 @@ void RiskAnalysis::notify()
     //cout << "Total cost of Satellite: " << newSat->getCost() << endl;
 }
 
-double RiskAnalysis::calcCost()
+void RiskAnalysis::calcCost()
 {
     int cost = 0;
     cout << "Performing Risk Analysis" << endl;

@@ -2,10 +2,15 @@
 #define SATELLITEBUILDER_H
 
 #include "ComponentBuilder.h"
+#include "Satellite/CollectionOfSatellites.h"
+#include "Satellite/Satellite.h"
 
-class SatelliteBuilder : ComponentBuilder{
-    Satellite* newSatellite;
+//forward declaring section
+
+class CollectionOfSatellites;
+
+class SatelliteBuilder : public ComponentBuilder{
     public:
-        Satellite* buildSatellite();
+        CollectionOfSatellites* buildSatellites(int);
 };
 #endif

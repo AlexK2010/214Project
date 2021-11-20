@@ -11,9 +11,9 @@ class RiskAnalysis : public Department{
         SatelliteFunctionality* strategy1;
         SatelliteFunctionality* strategy2;
     public:
-        RiskAnalysis(CollectionOfSatellites* ){};
-        ~RiskAnalysis(){};
-        double calcCost();
+        RiskAnalysis(CollectionOfSatellites* );
+        ~RiskAnalysis();
+        void calcCost();
         void notify();
 };
 

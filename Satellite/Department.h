@@ -3,12 +3,13 @@
 
 #include "Satellite.h"
 
+
 class Department{
     private:
     public:
         Department(){};
         ~Department(){};
-        virtual void notify(Satellite *colleague)=0;
+        virtual void notify()=0;
 };
 
 #endif
