@@ -11,6 +11,6 @@ Falcon9Factory::~Falcon9Factory(){
     ssCreator = nullptr;
 }
 
-Rocket* Falcon9Factory::createRocket(int aw){
-    return new Falcon9(ssCreator, aw);
+Rocket* Falcon9Factory::createRocket(CollectionOfSatellites* colSat){
+    return new Falcon9(ssCreator, colSat);
 }

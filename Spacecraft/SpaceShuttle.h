@@ -6,7 +6,7 @@ using namespace std;
 
 #include <iostream>
 
-#include "Rocket.h"
+#include "../Rocket/Rocket.h"
 #include "SpaceStation.h"
 
 using namespace std;
@@ -17,13 +17,13 @@ class SpaceStation; //forward declertion SpaceSation
 class SpaceShuttle{
 
 private:
-    double weightCapacity;
+    double weightCapacity; //how much the shuttle is carrying
     bool stage2;
     double currentWeight;
-    bool dockReady;
+    bool dockReady; //ready to dock?
     double Cost;
 
-    SpaceStation * spaceStation;
+    SpaceStation * spaceStation; //space station i'm observing
 public:
     
     SpaceShuttle();

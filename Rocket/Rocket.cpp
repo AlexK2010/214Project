@@ -2,6 +2,16 @@
 
 using namespace std;
 
+Rocket::Rocket()
+{
+
+}
+
+Rocket::~Rocket()
+{
+    cout<<"Rocket Destroyed"<<endl;
+}
+
 void Rocket::attach(SpaceShuttle* shuttle){
     this->spaceS=shuttle;
 }

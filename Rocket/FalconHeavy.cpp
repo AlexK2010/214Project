@@ -31,6 +31,7 @@ FalconHeavy::~FalconHeavy(){
 }
 
 bool FalconHeavy::fly(){
+    cost = 28 * 100000 + 3 * 50000 + 2 * 200000;
     if(payloadType){
         int numSat = 1;
         SatelliteIterator* temp = colSat->createSatelliteIterator();
@@ -47,20 +48,24 @@ bool FalconHeavy::fly(){
     cout<<"Falcon Heavy rocket preparing for launch"<<endl;
     fs->breakEngines(carryWeight, attachedWeight);
     numEnginesFailed = obsIter->checkEngines();
-    if(27/numEnginesFailed < 3){
-        cout<<numEnginesFailed<<" Merlin engines failed during launch."<<endl;
-        cout<<"Launch failed."<<endl;
-        return false;
-    }
+
+    if(numEnginesFailed != 0)
+        if(27/numEnginesFailed < 3){
+            cout<<numEnginesFailed<<" Merlin engines failed during launch."<<endl;
+            cout<<"Launch failed."<<endl;
+            return false;
+        }
     cout<<"Rocket launched successfully."<<endl;
     
     fs->breakEngines(carryWeight, attachedWeight);
     numEnginesFailed = obsIter->checkEngines();
-    if(27/numEnginesFailed < 3){
-        cout<<numEnginesFailed<<" Merlin engines failed during launch."<<endl;
-        cout<<"Rocket failed to reach orbit."<<endl;
-        return false;
-    }
+    
+    if(numEnginesFailed != 0)
+        if(27/numEnginesFailed < 3){
+            cout<<numEnginesFailed<<" Merlin engines failed during launch."<<endl;
+            cout<<"Rocket failed to reach orbit."<<endl;
+            return false;
+        }
     
     cout<<"Rocket's first stage detached."<<endl;
     cost -= fs->land();

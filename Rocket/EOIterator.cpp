@@ -2,7 +2,7 @@
 
 using namespace std;
 
-EOIterator::EOIterator(RocketObserver** obList, int s){
+EOIterator::EOIterator(EngineObserver** obList, int s){
     obsList = obList;
     pos = 0;
     size = s;
@@ -25,7 +25,7 @@ bool EOIterator::isDone(){
     return pos == size;
 }
 
-RocketObserver* EOIterator::currentItem(){
+EngineObserver* EOIterator::currentItem(){
     return obsList[pos];
 }
 

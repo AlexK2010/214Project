@@ -19,9 +19,8 @@ CrewDragon::~CrewDragon()
 
 void CrewDragon::update()
 {
-   this->setStage2(rocket->getRocketStage2());
 
-   if(isStage2())
+   if(rocket->fly())
    {
         cout<<"Crew Dragon entering stage 2."<<endl;
         cout<<"Merlin Engine detaching."<<endl;

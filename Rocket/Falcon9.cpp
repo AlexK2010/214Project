@@ -30,6 +30,7 @@ Falcon9::~Falcon9(){
 }
 
 bool Falcon9::fly(){
+    cost = 10 * 100000 + 50000 + 2 * 200000;
     if(payloadType){
         int numSat = 1;
         SatelliteIterator* temp = colSat->createSatelliteIterator();
@@ -46,21 +47,22 @@ bool Falcon9::fly(){
     cout<<"Falcon 9 rocket preparing for launch."<<endl;
     fs->breakEngines(carryWeight, attachedWeight);
     numEnginesFailed = obsIter->checkEngines();
-    if(9/numEnginesFailed<3){
-        cout<<numEnginesFailed<<" Merlin engines failed during launch."<<endl;
-        cout<<"Launch failed."<<endl;
-        return false;
-    }
+    if(numEnginesFailed != 0)
+        if((9/numEnginesFailed)<3){
+            cout<<numEnginesFailed<<" Merlin engines failed during launch."<<endl;
+            cout<<"Launch failed."<<endl;
+            return false;
+        }
     cout<<"Rocket launched successfully."<<endl;
 
     fs->breakEngines(carryWeight, attachedWeight);
     numEnginesFailed = obsIter->checkEngines();
-    if(9/numEnginesFailed<3){
-        cout<<numEnginesFailed<<" Merlin engines failed during flight."<<endl;
-        cout<<"Rocket failed to reach orbit."<<endl;
-        return false;
-    }
-
+    if(numEnginesFailed != 0)
+        if((9/numEnginesFailed)<3){
+            cout<<numEnginesFailed<<" Merlin engines failed during flight."<<endl;
+            cout<<"Rocket failed to reach orbit."<<endl;
+            return false;
+        }
     cout<<"Rocket's first stage detached."<<endl;
     cost -= fs->land();
 
