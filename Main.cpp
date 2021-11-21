@@ -44,21 +44,39 @@
 #include "Rocket/VacuumEngine.h"
 
 //Spacecraft stuff
-#include "Spacecraft/Button.h"
+
+//Base 
+#include "Spacecraft/SpaceStation.h"
+#include "Spacecraft/SpaceCraftCommand.h"
+#include "Spacecraft/SpaceShuttle.h"
+
+//Derived
+
+//spaceShuttles
 #include "Spacecraft/CrewDragon.h"
-#include "Spacecraft/Deceleration.h"
-#include "Spacecraft/Dock.h"
 #include "Spacecraft/Dragon.h"
-#include "Spacecraft/InternationalSpaceStation.h"
+
+//commands
+#include "Spacecraft/Deceleration.h"
 #include "Spacecraft/MoveLeft.h"
 #include "Spacecraft/MoveRight.h"
 #include "Spacecraft/Thrust.h"
-#include "Spacecraft/Deceleration.h"
+#include "Spacecraft/Dock.h"
+
+//operations
+#include "Spacecraft/Button.h"
+
+//spaceStations
+#include "Spacecraft/InternationalSpaceStation.h"
 
 
 //forward declaring section
 
 class CollectionOfSatellites;
+
+
+
+
 
 
 using namespace std;
