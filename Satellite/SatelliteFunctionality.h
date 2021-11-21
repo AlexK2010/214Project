@@ -4,6 +4,8 @@
 #include "Satellite.h"
 #include "CollectionOfSatellites.h"
 
+class CollectionOfSatellites;
+
 class SatelliteFunctionality{
     private:
     public:
