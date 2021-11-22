@@ -176,8 +176,11 @@ int main(){//add where you like
 
     Button* button = new Button(thrust);
 
-    cout<<endl;
     F9->fly();
+
+    cout << "=============================================================" <<endl <<endl;
+    
+
 
     cout<<"SpaceCraft Manuevering towards the spaceStation"<<endl;
 
@@ -206,11 +209,13 @@ int main(){//add where you like
 
     button->setCommand(deceleration);
     button->press();
-    
-    cout<<endl;
+
+    button->setCommand(dock);
+    button->press();
+
 
     cout<<"Docking on the ISS"<<endl;
-    cout << "=============================================================" << endl << endl;
+    cout << "=============================================================" <<endl <<endl;
     
 
     //not working, fix it oaks
