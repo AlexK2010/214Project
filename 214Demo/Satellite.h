@@ -14,6 +14,7 @@
 using namespace std;
 
 class Department;
+class GroundControl;
 
 class Satellite {
     private:
