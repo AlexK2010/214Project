@@ -5,14 +5,14 @@
 
 //builders
 #include "Director.h"
-#include "Director.cpp"
+//#include "Director.cpp"
 #include "ComponentBuilder.h"
 #include "RocketBuilder.h"
-#include "RocketBuilder.cpp"
+//#include "RocketBuilder.cpp"
 #include "SatelliteBuilder.h"
-#include "SatelliteBuilder.cpp"
+//#include "SatelliteBuilder.cpp"
 #include "SpacecraftBuilder.h"
-#include "SpacecraftBuilder.cpp"
+//#include "SpacecraftBuilder.cpp"
 
 //Satellite stuff
 #include "Satellite/Satellite.h"
@@ -111,8 +111,8 @@
 
 //forward declaring section
 
-class CollectionOfSatellites;
-class InternationalSpaceStation;
+//class CollectionOfSatellites;
+//class InternationalSpaceStation;
 //class Director;
 
 
@@ -231,13 +231,13 @@ int main(){//add where you like
 
 
     //delete stuff
-    /*delete ISS;
+    delete ISS;
     delete button;
     delete moveRight;
     delete moveLeft;
     delete thrust;
     delete deceleration;
-    delete dock;*/
+    delete dock;
     
 
 
