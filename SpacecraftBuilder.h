@@ -7,6 +7,7 @@
 
 class SpacecraftBuilder : public ComponentBuilder{
     public:
+        ~SpacecraftBuilder();
         CrewDragon* buildCrewDragon(Rocket*, int);
         Dragon* buildDragon(Rocket*);
 };

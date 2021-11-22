@@ -6,6 +6,9 @@
 
 using namespace std;
 
+class RocketIterator;
+class EngineObserver;
+
 class Engine
 {
     protected:

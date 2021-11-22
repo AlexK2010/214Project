@@ -1,7 +1,7 @@
 #include "FalconHeavy.h"
 #include "EngineObserver.h"
 #include "RocketFirstStage.h"
-#include "SatelliteIterator.h"
+#include "../Satellite/SatelliteIterator.h"
 #include <iostream>
 
 using namespace std;

@@ -11,6 +11,7 @@ class CollectionOfSatellites;
 
 class SatelliteBuilder : public ComponentBuilder{
     public:
+        ~SatelliteBuilder();
         CollectionOfSatellites* buildSatellites(int);
 };
 #endif

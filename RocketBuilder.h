@@ -10,6 +10,7 @@
 
 class RocketBuilder : public ComponentBuilder{
     public:
+        ~RocketBuilder();
         Rocket* buildFalcon9(StageCreator*, CollectionOfSatellites*);
         Rocket* buildFalconHeavy(StageCreator*, CollectionOfSatellites*);
         Rocket* buildFalcon9(StageCreator*);
