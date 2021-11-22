@@ -4,6 +4,7 @@
 #include "Satellite.h"
 #include "SatelliteIterator.h"
 
+class SatelliteIterator;
 class CollectionOfSatellites{
         Satellite* start;
     public:

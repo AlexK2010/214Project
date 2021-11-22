@@ -7,8 +7,8 @@
 #include "RocketStage.h"
 #include "RocketFirstStage.h"
 #include "StageCreator.h"
-#include "CollectionOfSatellites.h"
-#include "SpaceShuttle.h"
+#include "../Satellite/CollectionOfSatellites.h"
+#include "../Spacecraft/SpaceShuttle.h"
 #include "EngineObserver.h"
 
 using namespace std;

@@ -3,58 +3,90 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//builders
+//builders [when using makefile, comment out the .cpps]
 #include "Director.h"
+//#include "Director.cpp"
 #include "ComponentBuilder.h"
 #include "RocketBuilder.h"
+//#include "RocketBuilder.cpp"
 #include "SatelliteBuilder.h"
+//#include "SatelliteBuilder.cpp"
 #include "SpacecraftBuilder.h"
+//#include "SpacecraftBuilder.cpp"
 
 //Satellite stuff
 #include "Satellite/Satellite.h"
+#include "Satellite/Satellite.cpp"
 #include "Satellite/ChangeTrajectory.h"
+#include "Satellite/ChangeTrajectory.cpp"
 #include "Satellite/CollectionOfSatellites.h"
+#include "Satellite/CollectionOfSatellites.cpp"
 #include "Satellite/MaintenanceDepartment.h"
+#include "Satellite/MaintenanceDepartment.cpp"
 #include "Satellite/Path.h"
+#include "Satellite/Path.cpp"
 #include "Satellite/RiskAnalysis.h"
+#include "Satellite/RiskAnalysis.cpp"
 #include "Satellite/SatelliteIterator.h"
+#include "Satellite/SatelliteIterator.cpp"
 #include "Satellite/SignalDepartment.h"
+#include "Satellite/SignalDepartment.cpp"
 #include "Satellite/ToggleSignal.h"
+#include "Satellite/ToggleSignal.cpp"
 #include "Satellite/TrajectoryDepartment.h"
+#include "Satellite/TrajectoryDepartment.cpp"
 
 //Rocket Stuff
 #include "Rocket/Engine.h"
 #include "Rocket/EngineObserver.h"
+#include "Rocket/EngineObserver.cpp"
 #include "Rocket/EOIterator.h"
+#include "Rocket/EOIterator.cpp"
 #include "Rocket/F9Core.h"
+#include "Rocket/F9Core.cpp"
 #include "Rocket/Falcon9.h"
+#include "Rocket/Falcon9.cpp"
 #include "Rocket/Falcon9Factory.h"
+#include "Rocket/Falcon9Factory.cpp"
 #include "Rocket/FalconHeavy.h"
+#include "Rocket/FalconHeavy.cpp"
 #include "Rocket/FalconHeavyFactory.h"
+#include "Rocket/FalconHeavyFactory.cpp"
 #include "Rocket/MerlinEngine.h"
-#include "Rocket/Rocket.h"
+#include "Rocket/MerlinEngine.cpp"
 #include "Rocket/RocketFactory.h"
 #include "Rocket/RocketFirstStage.h"
+#include "Rocket/RocketFirstStage.cpp"
 #include "Rocket/RocketIterator.h"
 #include "Rocket/RocketObserver.h"
 #include "Rocket/RocketSecondStage.h"
+#include "Rocket/RocketSecondStage.cpp"
 #include "Rocket/RocketStage.h"
 #include "Rocket/RSSCreator.h"
+#include "Rocket/RSSCreator.cpp"
 #include "Rocket/StageCreator.h"
 #include "Rocket/VacuumEngine.h"
+#include "Rocket/VacuumEngine.cpp"
+#include "Rocket/Rocket.h"
+#include "Rocket/Rocket.cpp"
 
 //Spacecraft stuff
 
 //Base 
 #include "Spacecraft/SpaceShuttle.h"
+#include "Spacecraft/SpaceShuttle.cpp"
 #include "Spacecraft/SpaceCraftCommand.h"
+#include "Spacecraft/SpaceCraftCommand.cpp"
 #include "Spacecraft/SpaceStation.h"
+#include "Spacecraft/SpaceStation.cpp"
 
 //Derived
 
 //spaceShuttles
 #include "Spacecraft/CrewDragon.h"
 #include "Spacecraft/Dragon.h"
+#include "Spacecraft/CrewDragon.cpp"
+#include "Spacecraft/Dragon.cpp"
 
 //commands
 #include "Spacecraft/Deceleration.h"
@@ -62,22 +94,26 @@
 #include "Spacecraft/MoveRight.h"
 #include "Spacecraft/Thrust.h"
 #include "Spacecraft/Dock.h"
+#include "Spacecraft/Deceleration.cpp"
+#include "Spacecraft/MoveLeft.cpp"
+#include "Spacecraft/MoveRight.cpp"
+#include "Spacecraft/Thrust.cpp"
+#include "Spacecraft/Dock.cpp"
 
 //operations
 #include "Spacecraft/Button.h"
+#include "Spacecraft/Button.cpp"
 
 //spaceStations
 #include "Spacecraft/InternationalSpaceStation.h"
+#include "Spacecraft/InternationalSpaceStation.cpp"
 
 
 //forward declaring section
 
-class CollectionOfSatellites;
-class InternationalSpaceStation;
-
-
-
-
+//class CollectionOfSatellites;
+//class InternationalSpaceStation;
+//class Director;
 
 using namespace std;
 
@@ -120,7 +156,7 @@ int main(){//add where you like
     //cout something to screen to show what mission was, how it was done and the cost and objective
 
     cout<<"Building the SpaceShip: Falcon 9 + Dragon"<<endl;
-/*
+
     Rocket *F9=director2->getRocket();
     SpaceShuttle * dragon=director2->getSpaceCraft();
     
@@ -172,12 +208,11 @@ int main(){//add where you like
 
     cout<<"Docking on the ISS"<<endl;
 
-    button->setCommand(dock); //docking sequesce done through button
-    button->press();
+    //not working, fix it oaks
+    //button->setCommand(dock); //docking sequesce done through button
+    //button->press();
 
     cout<<endl;
-
-*/
 
 
     //Rockets detach the satellites
@@ -191,13 +226,13 @@ int main(){//add where you like
 
 
     //delete stuff
-    /*delete ISS;
+    delete ISS;
     delete button;
     delete moveRight;
     delete moveLeft;
     delete thrust;
     delete deceleration;
-    delete dock;*/
+    delete dock;
     
 
 

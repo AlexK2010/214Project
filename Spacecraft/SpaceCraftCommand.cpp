@@ -22,10 +22,9 @@ SpaceShuttle* SpaceCraftCommand :: getReceiver()
 
 SpaceCraftCommand :: ~SpaceCraftCommand()
 {
-    if(receiver!=nullptr)
-    {
-        receiver = nullptr; //all deletion will be handled by the client
-    }
-
+    // if(receiver!=nullptr)
+    // {
+    //     receiver = nullptr; //all deletion will be handled by the client
+    // }
     cout << "The Commander is destroyed!" <<endl;
 }

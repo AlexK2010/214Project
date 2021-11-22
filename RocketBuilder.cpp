@@ -1,5 +1,7 @@
 #include "RocketBuilder.h"
 
+RocketBuilder::~RocketBuilder(){}
+
 Rocket* RocketBuilder::buildFalcon9(StageCreator* sc, CollectionOfSatellites* colSat){
     RocketFactory* factory = new Falcon9Factory(sc);
     return factory->createRocket(colSat);

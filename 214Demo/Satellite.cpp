@@ -72,17 +72,17 @@ void Satellite::notify()
 		(*it)->update();
 }
 
-Path Satellite::getPath(){
+Path* Satellite::getPath(){
     return currPath;
 }
 
 void Satellite::setPath(int i){
-    currPath.setID(i);
+    currPath->setID(i);
 }
 
 void Satellite::detachFromRocket(int t){
     timeReleased = t;
-    currPath.setID(rand() % 4 + 1);
+    currPath->setID(rand() % 4 + 1);
     hasSignal=true;
     attached=false;
 }

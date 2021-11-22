@@ -17,7 +17,7 @@ void ChangeTrajectory::execute(CollectionOfSatellites* collection, int time){
     while(it->hasNext()){
         SatelliteIterator* runner = collection->createSatelliteIterator(); 
 
-        if(it->current()->getPath().getCurrContinent(time + it->current()->timeReleased) == runner->current()->getPath()->getCurrContinent(time + runner->current()->timeReleased) && it->current() != runner->current()){
+        if(it->current()->getPath()->getCurrContinent(time + it->current()->timeReleased) == runner->current()->getPath()->getCurrContinent(time + runner->current()->timeReleased) && it->current() != runner->current()){
                 if(it->current()->getPath()->getID()==4){
                     it->current()->setPath(1);
                     cout << "Changing " << it->current()->name << " Path from 4 to 1" << endl;
