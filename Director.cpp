@@ -15,6 +15,10 @@ Director::Director(bool rocketType, int numSat)
         carrier = rocketBuilder->buildFalconHeavy(secondStageCreator, satellites);
 
     spaceCraft = nullptr;
+
+    delete rocketBuilder;
+    delete satBuilder;
+    delete secondStageCreator;
 }
 
 Director::Director(bool rocketType, bool scType, int numPeople = 0)
@@ -36,6 +40,9 @@ Director::Director(bool rocketType, bool scType, int numPeople = 0)
     carrier->attach(spaceCraft);
 
     satellites = nullptr;
+    delete rocketBuilder;
+    delete spacecraftBuilder;
+    delete secondStageCreator;
 }
 
 Director::~Director(){
