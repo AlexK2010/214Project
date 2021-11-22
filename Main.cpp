@@ -238,6 +238,7 @@ int main(){//add where you like
     delete thrust;
     delete deceleration;
     delete dock;
+    cout << "hello";
     
 
 
