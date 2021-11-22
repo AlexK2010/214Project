@@ -47,7 +47,7 @@ class Satellite {
         double getCost();
         bool getAttached();
         Satellite* getNext();
-        Path getPath();
+        Path* getPath();
 
         //setters
         void setCost(double x);
