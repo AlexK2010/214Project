@@ -13,6 +13,8 @@
 
 using namespace std;
 
+class Department;
+
 class Satellite {
     private:
         double cost; 
