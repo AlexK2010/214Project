@@ -50,7 +50,7 @@ public:
         Observer stuff
     */
 
-    virtual void update()=0;
+    virtual void update(bool)=0;
     void registerRocket(Rocket * f_rocket);
 
     /*

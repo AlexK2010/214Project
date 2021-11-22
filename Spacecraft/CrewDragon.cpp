@@ -17,10 +17,10 @@ CrewDragon::~CrewDragon()
     cout<<"DraCrewDragon Destroyed"<<endl;
 }
 
-void CrewDragon::update()
+void CrewDragon::update(bool stage2)
 {
 
-   if(rocket->fly())
+   if(stage2)
    {
         cout<<"Crew Dragon entering stage 2."<<endl;
         cout<<"Merlin Engine detaching."<<endl;
