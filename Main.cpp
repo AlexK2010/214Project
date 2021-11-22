@@ -5,14 +5,14 @@
 
 //builders [when using makefile, comment out the .cpps]
 #include "Director.h"
-//#include "Director.cpp"
+#include "Director.cpp"
 #include "ComponentBuilder.h"
 #include "RocketBuilder.h"
-//#include "RocketBuilder.cpp"
+#include "RocketBuilder.cpp"
 #include "SatelliteBuilder.h"
-//#include "SatelliteBuilder.cpp"
+#include "SatelliteBuilder.cpp"
 #include "SpacecraftBuilder.h"
-//#include "SpacecraftBuilder.cpp"
+#include "SpacecraftBuilder.cpp"
 
 //Satellite stuff
 #include "Satellite/Satellite.h"
@@ -209,8 +209,8 @@ int main(){//add where you like
     cout<<"Docking on the ISS"<<endl;
 
     //not working, fix it oaks
-    //button->setCommand(dock); //docking sequesce done through button
-    //button->press();
+    button->setCommand(dock); //docking sequesce done through button
+    button->press();
 
     cout<<endl;
 
