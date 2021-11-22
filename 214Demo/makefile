@@ -98,7 +98,7 @@ ToggleSignal.o:	SatelliteFunctionality.h
 TrajectoryDepartment.o:	Satellite.h	Path.h	ChangeTrajectory.h	CollectionOfSatellites.h
 
 
-Main.o:		Dragon.h	CrewDragon.h	SpaceShuttle.h	InternationalSpaceStation.h	SpaceStation.h	SpaceCraftCommand.h	MoveLeft.h	MoveRight.h	Thrust.h	Dock.h	Button.h	Deceleration.h	VacuumEngine.h	StageCreator.h	RSSCreator.h	RocketStage.h	RocketSecondStage.h	RocketObserver.h	RocketIterator.h	RocketFirstStage.h	RocketFactory.h	Rocket.h	MerlinEngine.h	FalconHeavyFactory.h	FalconHeavy.h	Falcon9.h	EOIterator.h	EngineObserver.h	Engine.h	CollectionOfSatellites.h	F9Core.h	ChangeTrajectory.h	CollectionOfSatellites.h	Department.h	Satellite.h	GroundControl.h	MaintenanceDepartment.h	Path.h	RiskAnalysis.h	SatelliteFunctionality.h	SatelliteIterator.h	SignalDepartment.h	ToggleSignal.h	TrajectoryDepartment
+Main.o:		Dragon.h	CrewDragon.h	SpaceShuttle.h	InternationalSpaceStation.h	SpaceStation.h	SpaceCraftCommand.h	MoveLeft.h	MoveRight.h	Thrust.h	Dock.h	Button.h	Deceleration.h	VacuumEngine.h	StageCreator.h	RSSCreator.h	RocketStage.h	RocketSecondStage.h	RocketObserver.h	RocketIterator.h	RocketFirstStage.h	RocketFactory.h	Rocket.h	MerlinEngine.h	FalconHeavyFactory.h	FalconHeavy.h	Falcon9.h	EOIterator.h	EngineObserver.h	Engine.h	CollectionOfSatellites.h	F9Core.h	ChangeTrajectory.h	CollectionOfSatellites.h	Department.h	Satellite.h	GroundControl.h	MaintenanceDepartment.h	Path.h	RiskAnalysis.h	SatelliteFunctionality.h	SatelliteIterator.h	SignalDepartment.h	ToggleSignal.h	TrajectoryDepartment.h
 
 %.o:	%.cpp
 	$(CC)	$<	$(CFLAGS)	-c	-g	-o	$@
