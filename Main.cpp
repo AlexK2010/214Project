@@ -5,14 +5,14 @@
 
 //builders [when using makefile, comment out the .cpps]
 #include "Director.h"
-#include "Director.cpp"
+//#include "Director.cpp"
 #include "ComponentBuilder.h"
 #include "RocketBuilder.h"
-#include "RocketBuilder.cpp"
+//#include "RocketBuilder.cpp"
 #include "SatelliteBuilder.h"
-#include "SatelliteBuilder.cpp"
+//#include "SatelliteBuilder.cpp"
 #include "SpacecraftBuilder.h"
-#include "SpacecraftBuilder.cpp"
+//#include "SpacecraftBuilder.cpp"
 
 //Satellite stuff
 #include "Satellite/Satellite.h"
@@ -162,7 +162,9 @@ int main(){//add where you like
     
     //spaceStation
     
+    
     SpaceStation * ISS=new InternationalSpaceStation(dragon);
+    dragon->attatch(ISS);
 
     //create commands to be used
 
@@ -174,6 +176,7 @@ int main(){//add where you like
 
     Button* button = new Button(thrust);
 
+    cout<<endl;
     F9->fly();
 
     cout<<"SpaceCraft Manuevering towards the spaceStation"<<endl;
