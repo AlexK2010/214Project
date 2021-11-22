@@ -7,8 +7,8 @@
 class Department{
     private:
     public:
-        Department(){};
-        ~Department(){};
+        Department();
+        ~Department();
         virtual void notify()=0;
 };
 
