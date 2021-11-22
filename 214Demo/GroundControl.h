@@ -7,7 +7,7 @@ class GroundControl{ //Acts as Concrete Observer
     private:
     public:
     
-        GroundControl(){}
+        GroundControl();
         virtual ~GroundControl()=0;
         //virtual void notify(Satellite *colleague)=0;
         virtual void update()=0;
