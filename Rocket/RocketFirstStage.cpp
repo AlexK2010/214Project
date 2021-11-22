@@ -32,7 +32,7 @@ double RocketFirstStage::land(){
             return 0;
         }
     double cost = 0;
-    cost += (numEng - obsList->checkEngines()) * 50000;         //Cost reduced on number of engines not broken
+    cost += (numEng - obsList->checkEngines()) * 2050000;         //Cost reduced on number of engines not broken
     
     obsList->first();
     for(int i = 0; i<numCores; i++){
@@ -44,11 +44,11 @@ double RocketFirstStage::land(){
         }
         if(numBroken != 0)
             if(!(9 / numBroken < 3))
-                cost += 25000;                                      //Cost reduced on the number of cores not broken
+                cost += 1025000;                                      //Cost reduced on the number of cores not broken
     }
 
     if((numEng - obsList->checkEngines()) >= (numEng - numCores))
-        cost += 100000;                                         //Cost reduced on the rocket's first stage if number of broken engines is low
+        cost += 4100000;                                         //Cost reduced on the rocket's first stage if number of broken engines is low
 
     cout<<"Landing of rocket first stage successful!"<<endl;
     return cost;
