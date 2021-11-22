@@ -22,11 +22,6 @@ SpaceShuttle * SpaceStation::getShuttle()
     return shuttle;
 }
 
-void SpaceStation::setShuttle(SpaceShuttle * craft)
-{
-    this->shuttle=craft;
-}
-
 void SpaceStation::registerVesselArriving(SpaceShuttle* f_shuttle)
 {
     this->shuttle=f_shuttle;

@@ -20,7 +20,6 @@ class SpaceStation{
         virtual ~SpaceStation();
 
         SpaceShuttle * getShuttle();
-        void setShuttle(SpaceShuttle* suttle);
 
         virtual void update()=0;
 

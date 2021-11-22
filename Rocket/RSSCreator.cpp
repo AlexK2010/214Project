@@ -3,7 +3,8 @@
 
 using namespace std;
 
-RSSCreator::RSSCreator(){}
+RSSCreator::RSSCreator()
+{}
  
 RocketStage* RSSCreator::createRSS(RocketIterator* ri){
     return new RocketSecondStage(ri);

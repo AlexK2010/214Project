@@ -6,6 +6,7 @@
 
 //Rocket Stuff
 #include "RocketBuilder.h"
+#include "Rocket/RSSCreator.h"
 
 //satellite stuff
 #include "SatelliteBuilder.h"
@@ -14,8 +15,11 @@
 #include "SpacecraftBuilder.h"
 
 
-
 #include "iostream"
+
+//forward decleration
+class RSSCreator;
+
 
 using namespace std;
 

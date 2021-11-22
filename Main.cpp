@@ -46,9 +46,9 @@
 //Spacecraft stuff
 
 //Base 
-#include "Spacecraft/SpaceStation.h"
-#include "Spacecraft/SpaceCraftCommand.h"
 #include "Spacecraft/SpaceShuttle.h"
+#include "Spacecraft/SpaceCraftCommand.h"
+#include "Spacecraft/SpaceStation.h"
 
 //Derived
 
@@ -73,7 +73,7 @@
 //forward declaring section
 
 class CollectionOfSatellites;
-
+class InternationalSpaceStation;
 
 
 
@@ -120,7 +120,7 @@ int main(){//add where you like
     //cout something to screen to show what mission was, how it was done and the cost and objective
 
     cout<<"Building the SpaceShip: Falcon 9 + Dragon"<<endl;
-
+/*
     Rocket *F9=director2->getRocket();
     SpaceShuttle * dragon=director2->getSpaceCraft();
     
@@ -177,7 +177,7 @@ int main(){//add where you like
 
     cout<<endl;
 
-
+*/
 
 
     //Rockets detach the satellites
@@ -191,13 +191,13 @@ int main(){//add where you like
 
 
     //delete stuff
-    delete ISS;
+    /*delete ISS;
     delete button;
     delete moveRight;
     delete moveLeft;
     delete thrust;
     delete deceleration;
-    delete dock;
+    delete dock;*/
     
 
 

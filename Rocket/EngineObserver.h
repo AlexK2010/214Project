@@ -2,7 +2,7 @@
 #define ENGINEOBSERVER_H
 
 #include "RocketObserver.h"
-// #include "Engine.h"
+#include "Engine.h"
 
 using namespace std;
 

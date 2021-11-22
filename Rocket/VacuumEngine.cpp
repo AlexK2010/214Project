@@ -3,6 +3,10 @@
 
 using namespace std;
 
+VacuumEngine::VacuumEngine()
+{
+}
+
 VacuumEngine::VacuumEngine(RocketIterator* rIter){
     obsIter = rIter;
     status = false;
