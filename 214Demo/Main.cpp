@@ -50,6 +50,23 @@
 //spaceStations
 #include "InternationalSpaceStation.h"
 
+#include "Satellite.h"
+#include "ChangeTrajectory.h"
+#include "CollectionOfSatellites.h"
+#include "MaintenanceDepartment.h"
+#include "Path.h"
+#include "RiskAnalysis.h"
+#include "SatelliteIterator.h"
+#include "SignalDepartment.h"
+#include "ToggleSignal.h"
+#include "TrajectoryDepartment.h"
+
+#include "Director.h"
+#include "ComponentBuilder.h"
+#include "RocketBuilder.h"
+#include "SatelliteBuilder.h"
+#include "SpacecraftBuilder.h"
+
 
 //forward declaring section
 
@@ -77,8 +94,8 @@ int main(){//add where you like
                 pass in true or false (true=dragon, false=crewdragon)
                 third parameter for number of people (if it is a dragon then this parameter is ignored)
     */
-   // Director* director = new Director(true, 60);
-   // Director* director2 = new Director(false, true, 4);
+    Director* director = new Director(true, 60);
+    Director* director2 = new Director(false, true, 4);
 
     /*
         Using Director:
@@ -101,7 +118,7 @@ int main(){//add where you like
     //cout something to screen to show what mission was, how it was done and the cost and objective
 
     cout<<"Building the SpaceShip: Falcon 9 + Dragon"<<endl;
-/*
+
     Rocket *F9=director2->getRocket();
     SpaceShuttle * dragon=director2->getSpaceCraft();
     
@@ -158,7 +175,7 @@ int main(){//add where you like
 
     cout<<endl;
 
-*/
+
 
 
     //Rockets detach the satellites
