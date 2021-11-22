@@ -7,7 +7,7 @@
 
 //forward declaring section
 
-class CollectionOfSatellites;
+//class CollectionOfSatellites;
 
 class SatelliteBuilder : public ComponentBuilder{
     public:

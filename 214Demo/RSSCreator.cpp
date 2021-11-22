@@ -1,0 +1,12 @@
+#include "RSSCreator.h"
+#include "RocketSecondStage.h"
+
+using namespace std;
+
+RSSCreator::RSSCreator():StageCreator()
+{}
+ 
+RocketStage* RSSCreator::createRSS(RocketIterator* ri)
+{
+    return new RocketSecondStage(ri);
+}
