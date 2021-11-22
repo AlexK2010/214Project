@@ -13,7 +13,7 @@ class CrewDragon:public SpaceShuttle {
         CrewDragon(Rocket *rocket, int numHuman);
 
         ~CrewDragon();
-        virtual void update();
+        virtual void update(bool);
 
         virtual void deceleration();
         virtual void moveLeft();

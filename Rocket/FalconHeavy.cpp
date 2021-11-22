@@ -80,7 +80,7 @@ bool FalconHeavy::fly(){
 
     cout<<"Rocket reached desired orbit. Payload has detached safely."<<endl;
     if(!payloadType){
-        notify();
+        notify(true);
         detach();
     }else{
         int counter = 0;

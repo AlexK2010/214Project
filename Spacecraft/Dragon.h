@@ -14,7 +14,7 @@ class Dragon:public SpaceShuttle {
 
         ~Dragon();
 
-        virtual void update();
+        virtual void update(bool);
 
         virtual void deceleration();
         virtual void moveLeft();
