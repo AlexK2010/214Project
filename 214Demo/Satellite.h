@@ -34,7 +34,7 @@ class Satellite {
     public:
         int timeReleased;
         string name;
-        Path currPath;
+        Path *currPath;
         bool hasSignal=false;
         bool requireMaintenance=false;
         Satellite();
