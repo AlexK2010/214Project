@@ -154,7 +154,7 @@ int main(){//add where you like
     
     //spacecraft stuff - operate a mission
     //cout something to screen to show what mission was, how it was done and the cost and objective
-
+    cout << "=============================================================" << endl << endl;
     cout<<"Building the SpaceShip: Falcon 9 + Dragon"<<endl;
 
     Rocket *F9=director2->getRocket();
@@ -207,6 +207,8 @@ int main(){//add where you like
     cout<<endl;
 
     cout<<"Docking on the ISS"<<endl;
+    cout << "=============================================================" << endl << endl;
+    
 
     //not working, fix it oaks
     //button->setCommand(dock); //docking sequesce done through button
@@ -216,6 +218,9 @@ int main(){//add where you like
 
     //Rockets detach the satellites
     if(director->getRocket()->fly()==true){//first has to fly (most likely successful)
+
+        cout << "=============================================================" << endl << endl;
+    
         
         //Do full simulation of launching 60 satellites into orbit
         CollectionOfSatellites* starlinkSats = director->getSatellites();
@@ -266,6 +271,9 @@ int main(){//add where you like
         RiskAnalysis* riskDep = new RiskAnalysis(starlinkSats);
         riskDep->notify();
     } 
+
+    cout << "=============================================================" << endl << endl;
+    
     
     //End off with full explanation of cost vs income
     //Say whether a real life follow up of the sim would be viable
