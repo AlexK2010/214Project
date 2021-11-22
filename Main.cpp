@@ -5,14 +5,14 @@
 
 //builders [when using makefile, comment out the .cpps]
 #include "Director.h"
-//#include "Director.cpp"
+#include "Director.cpp"
 #include "ComponentBuilder.h"
 #include "RocketBuilder.h"
-//#include "RocketBuilder.cpp"
+#include "RocketBuilder.cpp"
 #include "SatelliteBuilder.h"
-//#include "SatelliteBuilder.cpp"
+#include "SatelliteBuilder.cpp"
 #include "SpacecraftBuilder.h"
-//#include "SpacecraftBuilder.cpp"
+#include "SpacecraftBuilder.cpp"
 
 //Satellite stuff
 #include "Satellite/Satellite.h"
@@ -114,12 +114,13 @@
 //class CollectionOfSatellites;
 //class InternationalSpaceStation;
 //class Director;
-
 using namespace std;
 
 int main(){//add where you like
 
     //cout some introduction and explanation
+    cout << "=============Simulation-Of-SpaceX-Rocket-Launch=============" << endl << endl;
+    cout << "A simulation of The launch of a Falcon 9 with a Dragon spacecraft will be commencing. Initially the Falcon 9 is Launched and checks are done constantly to insure safety. If succesful the Dragon will engage on a mission to Dock onto the International Space Station. " << endl;
 
     //Builder to build everything - M
     /* 
@@ -154,7 +155,7 @@ int main(){//add where you like
     
     //spacecraft stuff - operate a mission
     //cout something to screen to show what mission was, how it was done and the cost and objective
-    cout << "=============================================================" << endl << endl;
+    cout << endl << "=============================================================" << endl << endl;
     cout<<"Building the SpaceShip: Falcon 9 + Dragon"<<endl;
 
     Rocket *F9=director2->getRocket();
@@ -178,7 +179,7 @@ int main(){//add where you like
 
     F9->fly();
 
-    cout << "=============================================================" <<endl <<endl;
+    cout << endl <<"=============================================================" <<endl <<endl;
     
 
 
@@ -215,21 +216,18 @@ int main(){//add where you like
 
 
     cout<<"Docking on the ISS"<<endl;
-    cout << "=============================================================" <<endl <<endl;
     
 
-    //not working, fix it oaks
-    //button->setCommand(dock); //docking sequesce done through button
-    //button->press();
 
-    cout<<endl;
-
+    cout << endl << "============================================================="  << endl;
+    cout << endl << "Preparing Falcon 9 and 60 Starlink satellites attached." << endl;
+    cout << endl << "If the Falcon 9 trip is succesful then the satellites will proceed to release in increments of 1 hour each. They will follow a distinct path around the globe." << endl;
+    cout << endl;
     //Rockets detach the satellites
     if(director->getRocket()->fly()==true){//first has to fly (most likely successful)
 
-        cout << "=============================================================" << endl << endl;
-    
-        
+        cout << endl << "=============================================================" << endl;
+        cout << endl << "Proceeding to complete a Signal Check, Trajectory Check and Maintanence Check on the satellites and then finally a risk analysis to end things off." << endl;
         //Do full simulation of launching 60 satellites into orbit
         CollectionOfSatellites* starlinkSats = director->getSatellites();
         SatelliteIterator* it = starlinkSats->createSatelliteIterator();
@@ -280,7 +278,7 @@ int main(){//add where you like
         riskDep->notify();
     } 
 
-    cout << "=============================================================" << endl << endl;
+    cout << endl << "=============================================================" << endl << endl;
     
     
     //End off with full explanation of cost vs income
@@ -294,6 +292,8 @@ int main(){//add where you like
     delete thrust;
     delete deceleration;
     delete dock;
+    delete director;
+    delete director2;
     
 
     return 0;

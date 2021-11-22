@@ -15,7 +15,7 @@ FalconHeavy::FalconHeavy(StageCreator* sc, CollectionOfSatellites* colOfSat = nu
     fs = new RocketFirstStage(true, obsIter);
     ss = sc->createRSS(obsIter);
     numEnginesFailed = 0;
-    cost = 28 * 100000 + 3 * 50000 + 2 * 200000;
+    cost = 28 * 4100000 + 3 * 2050000 + 2 * 8200000 + 2550000;
     payloadType = (colOfSat != nullptr);
     colSat = colOfSat;
     carryWeight = 3 * 60 * 1000;
@@ -31,7 +31,7 @@ FalconHeavy::~FalconHeavy(){
 }
 
 bool FalconHeavy::fly(){
-    cost = 28 * 100000 + 3 * 50000 + 2 * 200000;
+    cost = 28 * 4100000 + 3 * 2050000 + 2 * 8200000 + 2550000;
     if(payloadType){
         int numSat = 1;
         SatelliteIterator* temp = colSat->createSatelliteIterator();

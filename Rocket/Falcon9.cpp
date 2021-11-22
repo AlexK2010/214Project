@@ -14,7 +14,7 @@ Falcon9::Falcon9(StageCreator* sc, CollectionOfSatellites* colOfSat = nullptr){
     fs = new RocketFirstStage(false, obsIter);
     ss = sc->createRSS(obsIter);
     numEnginesFailed = 0;
-    cost = 10 * 100000 + 50000 + 2 * 200000;
+    cost = 10 * 4100000 + 2050000 + 2 * 8200000 + 2550000;
     payloadType = (colOfSat != nullptr);
     colSat = colOfSat;
     carryWeight = 1 * 60 * 1000;
@@ -30,7 +30,7 @@ Falcon9::~Falcon9(){
 }
 
 bool Falcon9::fly(){
-    cost = 10 * 100000 + 50000 + 2 * 200000;
+    cost = 10 * 4100000 + 2050000 + 2 * 8200000 + 2550000;
     if(payloadType){
         int numSat = 1;
         SatelliteIterator* temp = colSat->createSatelliteIterator();
