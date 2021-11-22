@@ -209,21 +209,66 @@ int main(){//add where you like
     cout<<"Docking on the ISS"<<endl;
 
     //not working, fix it oaks
-    button->setCommand(dock); //docking sequesce done through button
-    button->press();
+    //button->setCommand(dock); //docking sequesce done through button
+    //button->press();
 
     cout<<endl;
 
-
     //Rockets detach the satellites
-    //Do full simulation of launching 60 satellites into orbit
-    //monitor them, Perform department operations
+    if(director->getRocket()->fly()==true){//first has to fly (most likely successful)
+        
+        //Do full simulation of launching 60 satellites into orbit
+        CollectionOfSatellites* starlinkSats = director->getSatellites();
+        SatelliteIterator* it = starlinkSats->createSatelliteIterator();
+        int counter = 0;
+        while(it->current()!=nullptr){
+            it->current()->detachFromRocket(counter++);
+            if(counter==25)counter=0;
+            it->next();
+        }
 
+         //monitor them, Perform department operations (Maintenance, Signal, Trajectory)
+        SignalDepartment* signalDep = new SignalDepartment(starlinkSats); //Checking if all sats in collection will toggle based on whether they are in the same trajectory
+        signalDep->update();
+
+        TrajectoryDepartment* trajDep = new TrajectoryDepartment(starlinkSats); //Checking if in same trajectory and then changing respectively
+        trajDep->notify();
+
+        cout << "Doing Maintanence on three random Satellites: " << endl;
+        
+        it->first(); //getting random satellites
+        for(int i = 0; i<rand() % 60; i++){
+            it->next();
+        }
+
+        MaintenanceDepartment* maintDep1 = new MaintenanceDepartment(it->current());
+        it->current()->requireMaintenance = true;
+        maintDep1->update();
+
+        it->first();
+        for(int i = 0; i<rand() % 60; i++){
+            it->next();
+        }
+
+        MaintenanceDepartment* maintDep2 = new MaintenanceDepartment(it->current());
+        it->current()->requireMaintenance = true;
+        maintDep2->update();
+
+        it->first();
+        for(int i = 0; i<rand() % 60; i++){
+            it->next();
+        }
+
+        MaintenanceDepartment* maintDep3 = new MaintenanceDepartment(it->current());
+        it->current()->requireMaintenance = true;
+        maintDep3->update();
+
+        RiskAnalysis* riskDep = new RiskAnalysis(starlinkSats);
+        riskDep->notify();
+    } 
+    
     //End off with full explanation of cost vs income
     //Say whether a real life follow up of the sim would be viable
-
-
-
 
     //delete stuff
     delete ISS;
@@ -234,8 +279,6 @@ int main(){//add where you like
     delete deceleration;
     delete dock;
     
-
-
 
     return 0;
 }
