@@ -57,6 +57,7 @@ string Path::getCurrContinent(int time){
         }
     }
     else return "Invalid";
+    return "Invalid";
 }
 string Path::ListCont(){
     string ret = "";
