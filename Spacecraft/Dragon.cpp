@@ -16,10 +16,10 @@ Dragon::~Dragon()
     cout<<"Dragon Destroyed"<<endl;
 }
 
-void Dragon::update()
+void Dragon::update(bool stage2)
 {
    
-    if(rocket->fly()) //if no failure occured
+    if(stage2) //if no failure occured
    {
        cout<<"Dragon entering stage 2."<<endl;
        cout<<"Merlin Engine detaching."<<endl;

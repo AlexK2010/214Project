@@ -35,7 +35,7 @@ class Rocket
         virtual bool fly() = 0;             //Causes the engines to be checked at launch and at the end of flight
         void attach(SpaceShuttle * spaceShuttle);   //Attaches a space shuttle to the rocket
         void detach();                              //Deataches the space shuttle
-        void notify();                              //Notifies the space shuttle stage 2 has been detached
+        void notify(bool);                              //Notifies the space shuttle stage 2 has been detached
         int getCost();                              //Reeturns the cost of the rocket
 };
 #endif

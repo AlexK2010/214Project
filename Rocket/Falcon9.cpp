@@ -76,8 +76,16 @@ bool Falcon9::fly(){
 
     cout<<"Rocket reached desired orbit. Payload has detached safely."<<endl;
     if(!payloadType){
-        notify();
+        notify(true);
         detach();
+    }else{
+        int counter = 0;
+        SatelliteIterator* tempIter = colSat->createSatelliteIterator();
+        while(tempIter->hasNext()){
+            tempIter->current()->detachFromRocket(counter++);
+            tempIter->next();   
+        }
+        delete tempIter;
     }
     return true;
 }

@@ -69,7 +69,7 @@ void SpaceShuttle::setDockReady(bool dock)
  * State
  * */
 
-void SpaceShuttle::update()
+void SpaceShuttle::update(bool stage2)
 {
    //virtual function. Should be implemented by concrete
 }

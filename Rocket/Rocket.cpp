@@ -20,8 +20,8 @@ void Rocket::detach(){
     spaceS=nullptr;
 }
 
-void Rocket::notify(){
-    spaceS->update();
+void Rocket::notify(bool stage2){
+    spaceS->update(stage2);
 }
 
 int Rocket::getCost(){
