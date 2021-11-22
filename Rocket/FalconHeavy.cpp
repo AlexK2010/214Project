@@ -82,6 +82,14 @@ bool FalconHeavy::fly(){
     if(!payloadType){
         notify(true);
         detach();
+    }else{
+        int counter = 0;
+        SatelliteIterator* tempIter = colSat->createSatelliteIterator();
+        while(tempIter->hasNext()){
+            tempIter->current()->detachFromRocket(counter++);
+            tempIter->next();   
+        }
+        delete tempIter;
     }
     return true;
 }
