@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//builders
+//builders [when using makefile, comment out the .cpps]
 #include "Director.h"
 //#include "Director.cpp"
 #include "ComponentBuilder.h"
@@ -115,10 +115,6 @@
 //class InternationalSpaceStation;
 //class Director;
 
-
-
-
-
 using namespace std;
 
 int main(){//add where you like
@@ -212,12 +208,11 @@ int main(){//add where you like
 
     cout<<"Docking on the ISS"<<endl;
 
-    button->setCommand(dock); //docking sequesce done through button
-    button->press();
+    //not working, fix it oaks
+    //button->setCommand(dock); //docking sequesce done through button
+    //button->press();
 
     cout<<endl;
-
-
 
 
     //Rockets detach the satellites
@@ -238,7 +233,6 @@ int main(){//add where you like
     delete thrust;
     delete deceleration;
     delete dock;
-    cout << "hello";
     
 
 
